@@ -22678,16 +22678,59 @@
 							    quid       	"5AE8D22A012C")
 							(object SynchronizationState "$UNNAMED$208"
 							    quid       	"5AE8D27E01B1")
-							(object ActivityState "mostrar nombre y sus mascotas"
+							(object ActivityState "mostrar datos del cliente y mascota"
 							    quid       	"5AE8D2AD017B")
 							(object Decision "$UNNAMED$209"
 							    quid       	"5AE8D2DF004C")
 							(object ActivityState "pulsar nuevo cliente"
 							    quid       	"5AE8D32001C8")
-							(object ActivityState "registrar datos cliente y mascota"
+							(object ActivityState "gestionar adicionar cliente y mascota"
 							    quid       	"5AE8D3690128")
 							(object State "$UNNAMED$210"
 							    quid       	"5AE8D3CE0293"
+							    type       	"EndState")
+							(object SynchronizationState "$UNNAMED$211"
+							    quid       	"5AE8D4500132")
+							(object SynchronizationState "$UNNAMED$212"
+							    quid       	"5AE8D48D0334")
+							(object ActivityState "selecionar mascota que entra a servicios jenerales"
+							    quid       	"5AE8D4E102EE")
+							(object ActivityState "pulsar buscar area"
+							    quid       	"5AE8D5E00284")
+							(object SynchronizationState "$UNNAMED$213"
+							    quid       	"5AE8D62700F2")
+							(object ActivityState "consultar tabla area"
+							    quid       	"5AE8D65A022B")
+							(object ActivityState "consultar tabla servicios"
+							    quid       	"5AE8D6860257")
+							(object SynchronizationState "$UNNAMED$214"
+							    quid       	"5AE8D6AE0160")
+							(object ActivityState "mostrar area y servicios"
+							    quid       	"5AE8D6C501B2")
+							(object ActivityState "seleccionar area y servicio"
+							    quid       	"5AE8D6E30220")
+							(object ActivityState "pulsar asignar personal"
+							    quid       	"5AE8D741000E")
+							(object ActivityState "mostrar formulario lista personal"
+							    quid       	"5AE8D75F007C")
+							(object ActivityState "consultar tabla empleado"
+							    quid       	"5AE8D77F015A")
+							(object ActivityState "mostrar lista de personales"
+							    quid       	"5AE8D79C036D")
+							(object ActivityState "seleccionar item de la lista"
+							    quid       	"5AE8D7D300FD")
+							(object ActivityState "pulsar doble click"
+							    quid       	"5AE8D7EA012C")
+							(object ActivityState "pasar datos a frmcitas"
+							    quid       	"5AE8D7FC03BC")
+							(object ActivityState "pulsar guardar cita"
+							    quid       	"5AE8D825016C")
+							(object ActivityState "puslar imprimir cita"
+							    quid       	"5AE8D89F03E5")
+							(object ActivityState "enviar cita realizada a impresora"
+							    quid       	"5AE8D8B9008A")
+							(object State "$UNNAMED$215"
+							    quid       	"5AE8D8D90398"
 							    type       	"EndState"))
 						    partitions 	(list Partitions
 							(object Partition "usuario"
@@ -22784,15 +22827,18 @@
 								quid       	"5AE8D2E503D1"))
 							(object State_Transition
 							    quid       	"5AE8D33201A9"
+							    label      	""
 							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::pulsar nuevo cliente"
 							    supplier_quidu 	"5AE8D32001C8"
 							    client     	"$UNNAMED$209"
 							    client_quidu 	"5AE8D2DF004C"
+							    Event      	(object Event "no"
+								quid       	"5AE8D33201AA")
 							    sendEvent  	(object sendEvent
 								quid       	"5AE8D33201AC"))
 							(object State_Transition
 							    quid       	"5AE8D38202C8"
-							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::registrar datos cliente y mascota"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::gestionar adicionar cliente y mascota"
 							    supplier_quidu 	"5AE8D3690128"
 							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::pulsar nuevo cliente"
 							    client_quidu 	"5AE8D32001C8"
@@ -22802,10 +22848,229 @@
 							    quid       	"5AE8D3D103B8"
 							    supplier   	"$UNNAMED$210"
 							    supplier_quidu 	"5AE8D3CE0293"
-							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::registrar datos cliente y mascota"
+							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::gestionar adicionar cliente y mascota"
 							    client_quidu 	"5AE8D3690128"
 							    sendEvent  	(object sendEvent
-								quid       	"5AE8D3D103BB")))
+								quid       	"5AE8D3D103BB"))
+							(object State_Transition
+							    quid       	"5AE8D43E00F5"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::consultar tabla cliente"
+							    supplier_quidu 	"5AE8D21A0245"
+							    client     	"$UNNAMED$209"
+							    client_quidu 	"5AE8D2DF004C"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D43E00F8"))
+							(object State_Transition
+							    quid       	"5AE8D454015B"
+							    label      	""
+							    supplier   	"$UNNAMED$211"
+							    supplier_quidu 	"5AE8D4500132"
+							    client     	"$UNNAMED$209"
+							    client_quidu 	"5AE8D2DF004C"
+							    Event      	(object Event "si"
+								quid       	"5AE8D454015C")
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D454015E"))
+							(object State_Transition
+							    quid       	"5AE8D4700093"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::consultar tabla cliente"
+							    supplier_quidu 	"5AE8D21A0245"
+							    client     	"$UNNAMED$211"
+							    client_quidu 	"5AE8D4500132"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D4700096"))
+							(object State_Transition
+							    quid       	"5AE8D47500F0"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::consultar tabla mascotas"
+							    supplier_quidu 	"5AE8D22A012C"
+							    client     	"$UNNAMED$211"
+							    client_quidu 	"5AE8D4500132"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D47500F3"))
+							(object State_Transition
+							    quid       	"5AE8D4930150"
+							    supplier   	"$UNNAMED$212"
+							    supplier_quidu 	"5AE8D48D0334"
+							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::consultar tabla mascotas"
+							    client_quidu 	"5AE8D22A012C"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D4930153"))
+							(object State_Transition
+							    quid       	"5AE8D4970274"
+							    supplier   	"$UNNAMED$212"
+							    supplier_quidu 	"5AE8D48D0334"
+							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::consultar tabla cliente"
+							    client_quidu 	"5AE8D21A0245"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D4970277"))
+							(object State_Transition
+							    quid       	"5AE8D4D203D1"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::mostrar datos del cliente y mascota"
+							    supplier_quidu 	"5AE8D2AD017B"
+							    client     	"$UNNAMED$212"
+							    client_quidu 	"5AE8D48D0334"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D4D203D4"))
+							(object State_Transition
+							    quid       	"5AE8D5020169"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::selecionar mascota que entra a servicios jenerales"
+							    supplier_quidu 	"5AE8D4E102EE"
+							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::mostrar datos del cliente y mascota"
+							    client_quidu 	"5AE8D2AD017B"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D502016C"))
+							(object State_Transition
+							    quid       	"5AE8D5F403AD"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::pulsar buscar area"
+							    supplier_quidu 	"5AE8D5E00284"
+							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::selecionar mascota que entra a servicios jenerales"
+							    client_quidu 	"5AE8D4E102EE"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D5F403B0"))
+							(object State_Transition
+							    quid       	"5AE8D62D0046"
+							    supplier   	"$UNNAMED$213"
+							    supplier_quidu 	"5AE8D62700F2"
+							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::pulsar buscar area"
+							    client_quidu 	"5AE8D5E00284"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D62D0049"))
+							(object State_Transition
+							    quid       	"5AE8D696019C"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::consultar tabla area"
+							    supplier_quidu 	"5AE8D65A022B"
+							    client     	"$UNNAMED$213"
+							    client_quidu 	"5AE8D62700F2"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D696019F"))
+							(object State_Transition
+							    quid       	"5AE8D69C0016"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::consultar tabla servicios"
+							    supplier_quidu 	"5AE8D6860257"
+							    client     	"$UNNAMED$213"
+							    client_quidu 	"5AE8D62700F2"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D69C0019"))
+							(object State_Transition
+							    quid       	"5AE8D6B3023B"
+							    supplier   	"$UNNAMED$214"
+							    supplier_quidu 	"5AE8D6AE0160"
+							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::consultar tabla servicios"
+							    client_quidu 	"5AE8D6860257"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D6B3023E"))
+							(object State_Transition
+							    quid       	"5AE8D6B80345"
+							    supplier   	"$UNNAMED$214"
+							    supplier_quidu 	"5AE8D6AE0160"
+							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::consultar tabla area"
+							    client_quidu 	"5AE8D65A022B"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D6B80348"))
+							(object State_Transition
+							    quid       	"5AE8D6DC025E"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::mostrar area y servicios"
+							    supplier_quidu 	"5AE8D6C501B2"
+							    client     	"$UNNAMED$214"
+							    client_quidu 	"5AE8D6AE0160"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D6DC0261"))
+							(object State_Transition
+							    quid       	"5AE8D6F20126"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::seleccionar area y servicio"
+							    supplier_quidu 	"5AE8D6E30220"
+							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::mostrar area y servicios"
+							    client_quidu 	"5AE8D6C501B2"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D6F20129"))
+							(object State_Transition
+							    quid       	"5AE8D7570202"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::pulsar asignar personal"
+							    supplier_quidu 	"5AE8D741000E"
+							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::seleccionar area y servicio"
+							    client_quidu 	"5AE8D6E30220"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D7570205"))
+							(object State_Transition
+							    quid       	"5AE8D779006F"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::mostrar formulario lista personal"
+							    supplier_quidu 	"5AE8D75F007C"
+							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::pulsar asignar personal"
+							    client_quidu 	"5AE8D741000E"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D7790072"))
+							(object State_Transition
+							    quid       	"5AE8D790039C"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::consultar tabla empleado"
+							    supplier_quidu 	"5AE8D77F015A"
+							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::mostrar formulario lista personal"
+							    client_quidu 	"5AE8D75F007C"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D790039F"))
+							(object State_Transition
+							    quid       	"5AE8D7C8037D"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::mostrar lista de personales"
+							    supplier_quidu 	"5AE8D79C036D"
+							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::consultar tabla empleado"
+							    client_quidu 	"5AE8D77F015A"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D7C80380"))
+							(object State_Transition
+							    quid       	"5AE8D7E1015B"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::seleccionar item de la lista"
+							    supplier_quidu 	"5AE8D7D300FD"
+							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::mostrar lista de personales"
+							    client_quidu 	"5AE8D79C036D"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D7E1015E"))
+							(object State_Transition
+							    quid       	"5AE8D7F602F1"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::pulsar doble click"
+							    supplier_quidu 	"5AE8D7EA012C"
+							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::seleccionar item de la lista"
+							    client_quidu 	"5AE8D7D300FD"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D7F602F4"))
+							(object State_Transition
+							    quid       	"5AE8D816012D"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::pasar datos a frmcitas"
+							    supplier_quidu 	"5AE8D7FC03BC"
+							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::pulsar doble click"
+							    client_quidu 	"5AE8D7EA012C"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D8160130"))
+							(object State_Transition
+							    quid       	"5AE8D881027B"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::pulsar guardar cita"
+							    supplier_quidu 	"5AE8D825016C"
+							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::pasar datos a frmcitas"
+							    client_quidu 	"5AE8D7FC03BC"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D881027E"))
+							(object State_Transition
+							    quid       	"5AE8D8B0004B"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::puslar imprimir cita"
+							    supplier_quidu 	"5AE8D89F03E5"
+							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::pulsar guardar cita"
+							    client_quidu 	"5AE8D825016C"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D8B0004E"))
+							(object State_Transition
+							    quid       	"5AE8D8CF03E6"
+							    supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::enviar cita realizada a impresora"
+							    supplier_quidu 	"5AE8D8B9008A"
+							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::puslar imprimir cita"
+							    client_quidu 	"5AE8D89F03E5"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D8CF03E9"))
+							(object State_Transition
+							    quid       	"5AE8D8DC03E6"
+							    supplier   	"$UNNAMED$215"
+							    supplier_quidu 	"5AE8D8D90398"
+							    client     	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas::State/Activity Model10::enviar cita realizada a impresora"
+							    client_quidu 	"5AE8D8B9008A"
+							    sendEvent  	(object sendEvent
+								quid       	"5AE8D8DC03E9")))
 						    objectflows 	(list objectflow_list)
 						    statediagrams 	(list StateDiagrams
 							(object ActivityDiagram "actividad modulo servicios- citas"
@@ -22815,7 +23080,7 @@
 							    max_height 	28350
 							    max_width  	21600
 							    origin_x   	0
-							    origin_y   	334
+							    origin_y   	5742
 							    items      	(list diagram_item_list
 								(object Swimlane "usuario" @995
 								    line_color 	3342489
@@ -22978,6 +23243,35 @@
 								    annotation 	1
 								    autoResize 	TRUE)
 								(object TransView "" @1005
+								    font       	(object Font
+									size       	9
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    label      	(object SegLabel @1006
+									Parent_View 	@1005
+									location   	(376, 970)
+									font       	(object Font
+									    size       	9
+									    face       	"Arial"
+									    bold       	FALSE
+									    italics    	FALSE
+									    underline  	FALSE
+									    strike     	FALSE
+									    color      	0
+									    default_color 	TRUE)
+									anchor_loc 	1
+									nlines     	1
+									max_width  	60
+									justify    	0
+									label      	"no"
+									pctDist    	0.552944
+									height     	37
+									orientation 	1)
 								    stereotype 	TRUE
 								    line_color 	3342489
 								    quidu      	"5AE8D33201A9"
@@ -22985,11 +23279,11 @@
 								    supplier   	@1004
 								    vertices   	(list Points
 									(581, 1008)
-									(319, 1007)
+									(319, 1006)
 									(319, 1116))
 								    line_style 	0
 								    x_offset   	FALSE)
-								(object ActivityStateView "registrar datos cliente y mascota" @1006
+								(object ActivityStateView "gestionar adicionar cliente y mascota" @1007
 								    Parent_View 	@995
 								    location   	(320, 1392)
 								    font       	(object Font
@@ -23002,14 +23296,14 @@
 									color      	0
 									default_color 	TRUE)
 								    label      	(object ItemLabel
-									Parent_View 	@1006
+									Parent_View 	@1007
 									location   	(320, 1393)
 									fill_color 	13434879
 									anchor_loc 	1
 									nlines     	2
 									max_width  	332
 									justify    	0
-									label      	"registrar datos cliente y mascota")
+									label      	"gestionar adicionar cliente y mascota")
 								    icon_style 	"Icon"
 								    line_color 	3342489
 								    fill_color 	13434879
@@ -23017,31 +23311,303 @@
 								    width      	438
 								    annotation 	1
 								    autoResize 	TRUE)
-								(object TransView "" @1007
+								(object TransView "" @1008
 								    stereotype 	TRUE
 								    line_color 	3342489
 								    quidu      	"5AE8D38202C8"
 								    client     	@1004
-								    supplier   	@1006
+								    supplier   	@1007
 								    vertices   	(list Points
 									(320, 1221)
 									(320, 1340))
 								    line_style 	0
 								    x_offset   	FALSE)
-								(object StateView "EndState" "$UNNAMED$210" @1008
+								(object StateView "EndState" "$UNNAMED$210" @1009
 								    Parent_View 	@995
 								    location   	(320, 1584)
 								    icon_style 	"Icon"
 								    line_color 	3342489
 								    quidu      	"5AE8D3CE0293"
 								    autoResize 	TRUE)
-								(object Swimlane "sistema" @1009
+								(object TransView "" @1010
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D3D103B8"
+								    client     	@1007
+								    supplier   	@1009
+								    vertices   	(list Points
+									(320, 1445)
+									(320, 1542))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object ActivityStateView "selecionar mascota que entra a servicios jenerales" @1011
+								    Parent_View 	@995
+								    location   	(608, 2048)
+								    font       	(object Font
+									size       	9
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    label      	(object ItemLabel
+									Parent_View 	@1011
+									location   	(608, 2049)
+									fill_color 	13434879
+									anchor_loc 	1
+									nlines     	2
+									max_width  	488
+									justify    	0
+									label      	"selecionar mascota que entra a servicios jenerales")
+								    icon_style 	"Icon"
+								    line_color 	3342489
+								    fill_color 	13434879
+								    quidu      	"5AE8D4E102EE"
+								    width      	594
+								    annotation 	1
+								    autoResize 	TRUE)
+								(object ActivityStateView "pulsar buscar area" @1012
+								    Parent_View 	@995
+								    location   	(608, 2288)
+								    font       	(object Font
+									size       	9
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    label      	(object ItemLabel
+									Parent_View 	@1012
+									location   	(608, 2289)
+									fill_color 	13434879
+									anchor_loc 	1
+									nlines     	2
+									max_width  	269
+									justify    	0
+									label      	"pulsar buscar area")
+								    icon_style 	"Icon"
+								    line_color 	3342489
+								    fill_color 	13434879
+								    quidu      	"5AE8D5E00284"
+								    annotation 	1
+								    autoResize 	TRUE)
+								(object TransView "" @1013
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D5F403AD"
+								    client     	@1011
+								    supplier   	@1012
+								    vertices   	(list Points
+									(608, 2101)
+									(608, 2236))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object ActivityStateView "seleccionar area y servicio" @1014
+								    Parent_View 	@995
+								    location   	(592, 3104)
+								    font       	(object Font
+									size       	9
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    label      	(object ItemLabel
+									Parent_View 	@1014
+									location   	(592, 3105)
+									fill_color 	13434879
+									anchor_loc 	1
+									nlines     	2
+									max_width  	269
+									justify    	0
+									label      	"seleccionar area y servicio")
+								    icon_style 	"Icon"
+								    line_color 	3342489
+								    fill_color 	13434879
+								    quidu      	"5AE8D6E30220"
+								    annotation 	1
+								    autoResize 	TRUE)
+								(object ActivityStateView "pulsar asignar personal" @1015
+								    Parent_View 	@995
+								    location   	(592, 3344)
+								    font       	(object Font
+									size       	9
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    label      	(object ItemLabel
+									Parent_View 	@1015
+									location   	(592, 3345)
+									fill_color 	13434879
+									anchor_loc 	1
+									nlines     	2
+									max_width  	269
+									justify    	0
+									label      	"pulsar asignar personal")
+								    icon_style 	"Icon"
+								    line_color 	3342489
+								    fill_color 	13434879
+								    quidu      	"5AE8D741000E"
+								    annotation 	1
+								    autoResize 	TRUE)
+								(object TransView "" @1016
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D7570202"
+								    client     	@1014
+								    supplier   	@1015
+								    vertices   	(list Points
+									(592, 3157)
+									(592, 3292))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object ActivityStateView "seleccionar item de la lista" @1017
+								    Parent_View 	@995
+								    location   	(624, 3744)
+								    font       	(object Font
+									size       	9
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    label      	(object ItemLabel
+									Parent_View 	@1017
+									location   	(624, 3745)
+									fill_color 	13434879
+									anchor_loc 	1
+									nlines     	2
+									max_width  	269
+									justify    	0
+									label      	"seleccionar item de la lista")
+								    icon_style 	"Icon"
+								    line_color 	3342489
+								    fill_color 	13434879
+								    quidu      	"5AE8D7D300FD"
+								    annotation 	1
+								    autoResize 	TRUE)
+								(object ActivityStateView "pulsar doble click" @1018
+								    Parent_View 	@995
+								    location   	(624, 3920)
+								    font       	(object Font
+									size       	9
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    label      	(object ItemLabel
+									Parent_View 	@1018
+									location   	(624, 3921)
+									fill_color 	13434879
+									anchor_loc 	1
+									nlines     	2
+									max_width  	269
+									justify    	0
+									label      	"pulsar doble click")
+								    icon_style 	"Icon"
+								    line_color 	3342489
+								    fill_color 	13434879
+								    quidu      	"5AE8D7EA012C"
+								    annotation 	1
+								    autoResize 	TRUE)
+								(object TransView "" @1019
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D7F602F1"
+								    client     	@1017
+								    supplier   	@1018
+								    vertices   	(list Points
+									(624, 3797)
+									(624, 3868))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object ActivityStateView "pulsar guardar cita" @1020
+								    Parent_View 	@995
+								    location   	(624, 4128)
+								    font       	(object Font
+									size       	9
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    label      	(object ItemLabel
+									Parent_View 	@1020
+									location   	(624, 4129)
+									fill_color 	13434879
+									anchor_loc 	1
+									nlines     	2
+									max_width  	269
+									justify    	0
+									label      	"pulsar guardar cita")
+								    icon_style 	"Icon"
+								    line_color 	3342489
+								    fill_color 	13434879
+								    quidu      	"5AE8D825016C"
+								    annotation 	1
+								    autoResize 	TRUE)
+								(object ActivityStateView "puslar imprimir cita" @1021
+								    Parent_View 	@995
+								    location   	(624, 4320)
+								    font       	(object Font
+									size       	9
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    label      	(object ItemLabel
+									Parent_View 	@1021
+									location   	(624, 4321)
+									fill_color 	13434879
+									anchor_loc 	1
+									nlines     	2
+									max_width  	269
+									justify    	0
+									label      	"puslar imprimir cita")
+								    icon_style 	"Icon"
+								    line_color 	3342489
+								    fill_color 	13434879
+								    quidu      	"5AE8D89F03E5"
+								    annotation 	1
+								    autoResize 	TRUE)
+								(object TransView "" @1022
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D8B0004B"
+								    client     	@1020
+								    supplier   	@1021
+								    vertices   	(list Points
+									(624, 4181)
+									(624, 4268))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object Swimlane "sistema" @1023
 								    location   	(1220, 0)
 								    line_color 	3342489
 								    quidu      	"5AE8D17201FE"
 								    width      	1278)
-								(object ActivityStateView "mostrar formulario de citas" @1010
-								    Parent_View 	@1009
+								(object ActivityStateView "mostrar formulario de citas" @1024
+								    Parent_View 	@1023
 								    location   	(1888, 592)
 								    font       	(object Font
 									size       	9
@@ -23053,7 +23619,7 @@
 									color      	0
 									default_color 	TRUE)
 								    label      	(object ItemLabel
-									Parent_View 	@1010
+									Parent_View 	@1024
 									location   	(1888, 593)
 									fill_color 	13434879
 									anchor_loc 	1
@@ -23068,20 +23634,32 @@
 								    width      	458
 								    annotation 	1
 								    autoResize 	TRUE)
-								(object TransView "" @1011
+								(object TransView "" @1025
 								    stereotype 	TRUE
 								    line_color 	3342489
 								    quidu      	"5AE8D1D402C8"
 								    client     	@999
-								    supplier   	@1010
+								    supplier   	@1024
 								    vertices   	(list Points
 									(811, 592)
 									(1686, 592))
 								    line_style 	0
 								    x_offset   	FALSE)
-								(object ActivityStateView "consultar tabla cliente" @1012
-								    Parent_View 	@1009
-								    location   	(1644, 1472)
+								(object TransView "" @1026
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D2040131"
+								    client     	@1024
+								    supplier   	@1001
+								    vertices   	(list Points
+									(1888, 645)
+									(1888, 832)
+									(827, 832))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object ActivityStateView "consultar tabla cliente" @1027
+								    Parent_View 	@1023
+								    location   	(1664, 1472)
 								    font       	(object Font
 									size       	9
 									face       	"Arial"
@@ -23092,8 +23670,8 @@
 									color      	0
 									default_color 	TRUE)
 								    label      	(object ItemLabel
-									Parent_View 	@1012
-									location   	(1644, 1473)
+									Parent_View 	@1027
+									location   	(1664, 1473)
 									fill_color 	13434879
 									anchor_loc 	1
 									nlines     	2
@@ -23106,8 +23684,8 @@
 								    quidu      	"5AE8D21A0245"
 								    annotation 	1
 								    autoResize 	TRUE)
-								(object ActivityStateView "consultar tabla mascotas" @1013
-								    Parent_View 	@1009
+								(object ActivityStateView "consultar tabla mascotas" @1028
+								    Parent_View 	@1023
 								    location   	(2124, 1472)
 								    font       	(object Font
 									size       	9
@@ -23119,7 +23697,7 @@
 									color      	0
 									default_color 	TRUE)
 								    label      	(object ItemLabel
-									Parent_View 	@1013
+									Parent_View 	@1028
 									location   	(2124, 1473)
 									fill_color 	13434879
 									anchor_loc 	1
@@ -23133,9 +23711,9 @@
 								    quidu      	"5AE8D22A012C"
 								    annotation 	1
 								    autoResize 	TRUE)
-								(object ActivityStateView "mostrar nombre y sus mascotas" @1014
-								    Parent_View 	@1009
-								    location   	(1884, 1904)
+								(object ActivityStateView "mostrar datos del cliente y mascota" @1029
+								    Parent_View 	@1023
+								    location   	(1904, 1840)
 								    font       	(object Font
 									size       	9
 									face       	"Arial"
@@ -23146,14 +23724,14 @@
 									color      	0
 									default_color 	TRUE)
 								    label      	(object ItemLabel
-									Parent_View 	@1014
-									location   	(1884, 1905)
+									Parent_View 	@1029
+									location   	(1904, 1841)
 									fill_color 	13434879
 									anchor_loc 	1
 									nlines     	2
 									max_width  	340
 									justify    	0
-									label      	"mostrar nombre y sus mascotas")
+									label      	"mostrar datos del cliente y mascota")
 								    icon_style 	"Icon"
 								    line_color 	3342489
 								    fill_color 	13434879
@@ -23161,11 +23739,337 @@
 								    width      	446
 								    annotation 	1
 								    autoResize 	TRUE)
-								(object Swimlane "" @1015
+								(object TransView "" @1030
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D5020169"
+								    client     	@1029
+								    supplier   	@1011
+								    vertices   	(list Points
+									(1903, 1893)
+									(1903, 2046)
+									(861, 2047))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object ActivityStateView "consultar tabla area" @1031
+								    Parent_View 	@1023
+								    location   	(1680, 2640)
+								    font       	(object Font
+									size       	9
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    label      	(object ItemLabel
+									Parent_View 	@1031
+									location   	(1680, 2641)
+									fill_color 	13434879
+									anchor_loc 	1
+									nlines     	2
+									max_width  	269
+									justify    	0
+									label      	"consultar tabla area")
+								    icon_style 	"Icon"
+								    line_color 	3342489
+								    fill_color 	13434879
+								    quidu      	"5AE8D65A022B"
+								    annotation 	1
+								    autoResize 	TRUE)
+								(object ActivityStateView "consultar tabla servicios" @1032
+								    Parent_View 	@1023
+								    location   	(2160, 2624)
+								    font       	(object Font
+									size       	9
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    label      	(object ItemLabel
+									Parent_View 	@1032
+									location   	(2160, 2625)
+									fill_color 	13434879
+									anchor_loc 	1
+									nlines     	2
+									max_width  	269
+									justify    	0
+									label      	"consultar tabla servicios")
+								    icon_style 	"Icon"
+								    line_color 	3342489
+								    fill_color 	13434879
+								    quidu      	"5AE8D6860257"
+								    annotation 	1
+								    autoResize 	TRUE)
+								(object ActivityStateView "mostrar area y servicios" @1033
+								    Parent_View 	@1023
+								    location   	(1920, 3104)
+								    font       	(object Font
+									size       	9
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    label      	(object ItemLabel
+									Parent_View 	@1033
+									location   	(1920, 3105)
+									fill_color 	13434879
+									anchor_loc 	1
+									nlines     	2
+									max_width  	269
+									justify    	0
+									label      	"mostrar area y servicios")
+								    icon_style 	"Icon"
+								    line_color 	3342489
+								    fill_color 	13434879
+								    quidu      	"5AE8D6C501B2"
+								    annotation 	1
+								    autoResize 	TRUE)
+								(object TransView "" @1034
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D6F20126"
+								    client     	@1033
+								    supplier   	@1014
+								    vertices   	(list Points
+									(1749, 3104)
+									(763, 3104))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object ActivityStateView "mostrar formulario lista personal" @1035
+								    Parent_View 	@1023
+								    location   	(1952, 3344)
+								    font       	(object Font
+									size       	9
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    label      	(object ItemLabel
+									Parent_View 	@1035
+									location   	(1952, 3345)
+									fill_color 	13434879
+									anchor_loc 	1
+									nlines     	2
+									max_width  	334
+									justify    	0
+									label      	"mostrar formulario lista personal")
+								    icon_style 	"Icon"
+								    line_color 	3342489
+								    fill_color 	13434879
+								    quidu      	"5AE8D75F007C"
+								    width      	440
+								    annotation 	1
+								    autoResize 	TRUE)
+								(object TransView "" @1036
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D779006F"
+								    client     	@1015
+								    supplier   	@1035
+								    vertices   	(list Points
+									(763, 3344)
+									(1756, 3344))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object ActivityStateView "consultar tabla empleado" @1037
+								    Parent_View 	@1023
+								    location   	(1952, 3552)
+								    font       	(object Font
+									size       	9
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    label      	(object ItemLabel
+									Parent_View 	@1037
+									location   	(1952, 3553)
+									fill_color 	13434879
+									anchor_loc 	1
+									nlines     	2
+									max_width  	269
+									justify    	0
+									label      	"consultar tabla empleado")
+								    icon_style 	"Icon"
+								    line_color 	3342489
+								    fill_color 	13434879
+								    quidu      	"5AE8D77F015A"
+								    annotation 	1
+								    autoResize 	TRUE)
+								(object TransView "" @1038
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D790039C"
+								    client     	@1035
+								    supplier   	@1037
+								    vertices   	(list Points
+									(1952, 3397)
+									(1952, 3500))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object ActivityStateView "mostrar lista de personales" @1039
+								    Parent_View 	@1023
+								    location   	(1952, 3744)
+								    font       	(object Font
+									size       	9
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    label      	(object ItemLabel
+									Parent_View 	@1039
+									location   	(1952, 3745)
+									fill_color 	13434879
+									anchor_loc 	1
+									nlines     	2
+									max_width  	269
+									justify    	0
+									label      	"mostrar lista de personales")
+								    icon_style 	"Icon"
+								    line_color 	3342489
+								    fill_color 	13434879
+								    quidu      	"5AE8D79C036D"
+								    annotation 	1
+								    autoResize 	TRUE)
+								(object TransView "" @1040
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D7C8037D"
+								    client     	@1037
+								    supplier   	@1039
+								    vertices   	(list Points
+									(1952, 3605)
+									(1952, 3692))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object TransView "" @1041
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D7E1015B"
+								    client     	@1039
+								    supplier   	@1017
+								    vertices   	(list Points
+									(1781, 3744)
+									(795, 3744))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object ActivityStateView "pasar datos a frmcitas" @1042
+								    Parent_View 	@1023
+								    location   	(1968, 3920)
+								    font       	(object Font
+									size       	9
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    label      	(object ItemLabel
+									Parent_View 	@1042
+									location   	(1968, 3921)
+									fill_color 	13434879
+									anchor_loc 	1
+									nlines     	2
+									max_width  	269
+									justify    	0
+									label      	"pasar datos a frmcitas")
+								    icon_style 	"Icon"
+								    line_color 	3342489
+								    fill_color 	13434879
+								    quidu      	"5AE8D7FC03BC"
+								    annotation 	1
+								    autoResize 	TRUE)
+								(object TransView "" @1043
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D816012D"
+								    client     	@1018
+								    supplier   	@1042
+								    vertices   	(list Points
+									(795, 3920)
+									(1797, 3920))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object TransView "" @1044
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D881027B"
+								    client     	@1042
+								    supplier   	@1020
+								    vertices   	(list Points
+									(1967, 3973)
+									(1965, 4130)
+									(795, 4128))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object ActivityStateView "enviar cita realizada a impresora" @1045
+								    Parent_View 	@1023
+								    location   	(1984, 4320)
+								    font       	(object Font
+									size       	9
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    label      	(object ItemLabel
+									Parent_View 	@1045
+									location   	(1984, 4321)
+									fill_color 	13434879
+									anchor_loc 	1
+									nlines     	2
+									max_width  	344
+									justify    	0
+									label      	"enviar cita realizada a impresora")
+								    icon_style 	"Icon"
+								    line_color 	3342489
+								    fill_color 	13434879
+								    quidu      	"5AE8D8B9008A"
+								    width      	450
+								    annotation 	1
+								    autoResize 	TRUE)
+								(object TransView "" @1046
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D8CF03E6"
+								    client     	@1021
+								    supplier   	@1045
+								    vertices   	(list Points
+									(795, 4320)
+									(1785, 4320))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object StateView "EndState" "$UNNAMED$215" @1047
+								    Parent_View 	@1023
+								    location   	(1984, 4512)
+								    icon_style 	"Icon"
+								    line_color 	3342489
+								    quidu      	"5AE8D8D90398"
+								    autoResize 	TRUE)
+								(object Swimlane "" @1048
 								    location   	(2498, 0)
 								    line_color 	3342489
 								    width      	450)
-								(object SynchronizationView "$UNNAMED$207" @1016
+								(object SynchronizationView "$UNNAMED$211" @1049
 								    location   	(1888, 1200)
 								    font       	(object Font
 									size       	9
@@ -23176,8 +24080,8 @@
 									strike     	FALSE
 									color      	0
 									default_color 	TRUE)
-								    label      	(object SegLabel @1017
-									Parent_View 	@1016
+								    label      	(object SegLabel @1050
+									Parent_View 	@1049
 									location   	(2050, 1132)
 									font       	(object Font
 									    size       	9
@@ -23197,34 +24101,11 @@
 									orientation 	0)
 								    icon_style 	"Icon"
 								    line_color 	3342489
-								    quidu      	"5AE8D2170301"
+								    quidu      	"5AE8D4500132"
 								    autoResize 	TRUE
 								    sync_flow_direction 	1
 								    sync_is_horizontal 	TRUE)
-								(object TransView "" @1018
-								    stereotype 	TRUE
-								    line_color 	3342489
-								    quidu      	"5AE8D2570143"
-								    client     	@1016
-								    supplier   	@1012
-								    vertices   	(list Points
-									(1879, 1209)
-									(1733, 1420))
-								    line_style 	0
-								    x_offset   	FALSE)
-								(object TransView "" @1019
-								    stereotype 	TRUE
-								    line_color 	3342489
-								    quidu      	"5AE8D25C0285"
-								    client     	@1016
-								    supplier   	@1013
-								    vertices   	(list Points
-									(1895, 1209)
-									(2102, 1419))
-								    line_style 	0
-								    x_offset   	FALSE)
-								(object SynchronizationView "$UNNAMED$208" @1020
-								    location   	(2320, 1840)
+								(object TransView "" @1051
 								    font       	(object Font
 									size       	9
 									face       	"Arial"
@@ -23234,9 +24115,142 @@
 									strike     	FALSE
 									color      	0
 									default_color 	TRUE)
-								    label      	(object SegLabel @1021
-									Parent_View 	@1020
-									location   	(2482, 1772)
+								    label      	(object SegLabel @1052
+									Parent_View 	@1051
+									location   	(1397, 967)
+									font       	(object Font
+									    size       	9
+									    face       	"Arial"
+									    bold       	FALSE
+									    italics    	FALSE
+									    underline  	FALSE
+									    strike     	FALSE
+									    color      	0
+									    default_color 	TRUE)
+									anchor_loc 	1
+									nlines     	1
+									max_width  	60
+									justify    	0
+									label      	"si"
+									pctDist    	0.500000
+									height     	45
+									orientation 	0)
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D454015B"
+								    client     	@1002
+								    supplier   	@1049
+								    vertices   	(list Points
+									(731, 1008)
+									(1887, 1013)
+									(1887, 1190))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object TransView "" @1053
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D4700093"
+								    client     	@1049
+								    supplier   	@1027
+								    vertices   	(list Points
+									(1880, 1209)
+									(1711, 1419))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object TransView "" @1054
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D47500F0"
+								    client     	@1049
+								    supplier   	@1028
+								    vertices   	(list Points
+									(1895, 1209)
+									(2084, 1419))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object SynchronizationView "$UNNAMED$212" @1055
+								    location   	(1904, 1680)
+								    font       	(object Font
+									size       	9
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    label      	(object SegLabel @1056
+									Parent_View 	@1055
+									location   	(2065, 1612)
+									font       	(object Font
+									    size       	9
+									    face       	"Arial"
+									    bold       	FALSE
+									    italics    	TRUE
+									    underline  	FALSE
+									    strike     	FALSE
+									    color      	0
+									    default_color 	TRUE)
+									nlines     	2
+									max_width  	300
+									justify    	1
+									label      	""
+									pctDist    	0.996667
+									height     	0
+									orientation 	0)
+								    icon_style 	"Icon"
+								    line_color 	3342489
+								    quidu      	"5AE8D48D0334"
+								    autoResize 	TRUE
+								    sync_flow_direction 	1
+								    sync_is_horizontal 	TRUE)
+								(object TransView "" @1057
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D4930150"
+								    client     	@1028
+								    supplier   	@1055
+								    vertices   	(list Points
+									(2067, 1524)
+									(1912, 1670))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object TransView "" @1058
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D4970274"
+								    client     	@1027
+								    supplier   	@1055
+								    vertices   	(list Points
+									(1725, 1524)
+									(1893, 1670))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object TransView "" @1059
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D4D203D1"
+								    client     	@1055
+								    supplier   	@1029
+								    vertices   	(list Points
+									(1904, 1689)
+									(1904, 1788))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object SynchronizationView "$UNNAMED$213" @1060
+								    location   	(1904, 2432)
+								    font       	(object Font
+									size       	9
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    label      	(object SegLabel @1061
+									Parent_View 	@1060
+									location   	(2066, 2364)
 									font       	(object Font
 									    size       	9
 									    face       	"Arial"
@@ -23255,53 +24269,122 @@
 									orientation 	0)
 								    icon_style 	"Icon"
 								    line_color 	3342489
-								    quidu      	"5AE8D27E01B1"
+								    quidu      	"5AE8D62700F2"
 								    autoResize 	TRUE
 								    sync_flow_direction 	1
 								    sync_is_horizontal 	TRUE)
-								(object TransView "" @1022
+								(object TransView "" @1062
 								    stereotype 	TRUE
 								    line_color 	3342489
-								    quidu      	"5AE8D283020A"
-								    client     	@1013
-								    supplier   	@1020
-								    vertices   	(list Points
-									(2152, 1525)
-									(2314, 1830))
-								    line_style 	0
-								    x_offset   	FALSE)
-								(object TransView "" @1023
-								    stereotype 	TRUE
-								    line_color 	3342489
-								    quidu      	"5AE8D28C00A4"
+								    quidu      	"5AE8D62D0046"
 								    client     	@1012
-								    supplier   	@1020
+								    supplier   	@1060
 								    vertices   	(list Points
-									(1741, 1524)
-									(2303, 1830))
+									(779, 2287)
+									(1905, 2285)
+									(1904, 2422))
 								    line_style 	0
 								    x_offset   	FALSE)
-								(object TransView "" @1024
+								(object TransView "" @1063
 								    stereotype 	TRUE
 								    line_color 	3342489
-								    quidu      	"5AE8D3D103B8"
-								    client     	@1006
-								    supplier   	@1008
+								    quidu      	"5AE8D696019C"
+								    client     	@1060
+								    supplier   	@1031
 								    vertices   	(list Points
-									(320, 1445)
-									(320, 1542))
+									(1893, 2441)
+									(1733, 2587))
 								    line_style 	0
 								    x_offset   	FALSE)
-								(object TransView "" @1025
+								(object TransView "" @1064
 								    stereotype 	TRUE
 								    line_color 	3342489
-								    quidu      	"5AE8D2040131"
-								    client     	@1010
-								    supplier   	@1001
+								    quidu      	"5AE8D69C0016"
+								    client     	@1060
+								    supplier   	@1032
 								    vertices   	(list Points
-									(1888, 645)
-									(1888, 832)
-									(827, 832))
+									(1916, 2441)
+									(2092, 2572))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object SynchronizationView "$UNNAMED$214" @1065
+								    location   	(1920, 2896)
+								    font       	(object Font
+									size       	9
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    label      	(object SegLabel @1066
+									Parent_View 	@1065
+									location   	(2082, 2828)
+									font       	(object Font
+									    size       	9
+									    face       	"Arial"
+									    bold       	FALSE
+									    italics    	TRUE
+									    underline  	FALSE
+									    strike     	FALSE
+									    color      	0
+									    default_color 	TRUE)
+									nlines     	2
+									max_width  	300
+									justify    	1
+									label      	""
+									pctDist    	1.000000
+									height     	0
+									orientation 	0)
+								    icon_style 	"Icon"
+								    line_color 	3342489
+								    quidu      	"5AE8D6AE0160"
+								    autoResize 	TRUE
+								    sync_flow_direction 	1
+								    sync_is_horizontal 	TRUE)
+								(object TransView "" @1067
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D6B3023B"
+								    client     	@1032
+								    supplier   	@1065
+								    vertices   	(list Points
+									(2113, 2676)
+									(1928, 2886))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object TransView "" @1068
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D6B80345"
+								    client     	@1031
+								    supplier   	@1065
+								    vertices   	(list Points
+									(1729, 2692)
+									(1911, 2886))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object TransView "" @1069
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D6DC025E"
+								    client     	@1065
+								    supplier   	@1033
+								    vertices   	(list Points
+									(1920, 2905)
+									(1920, 3052))
+								    line_style 	0
+								    x_offset   	FALSE)
+								(object TransView "" @1070
+								    stereotype 	TRUE
+								    line_color 	3342489
+								    quidu      	"5AE8D8DC03E6"
+								    client     	@1045
+								    supplier   	@1047
+								    vertices   	(list Points
+									(1984, 4373)
+									(1984, 4470))
 								    line_style 	0
 								    x_offset   	FALSE))))))
 					    (object UseCase "gestionar adicionar citas"
@@ -23385,15 +24468,15 @@
 							quidu      	"5AE8B2890249")))
 					    (object UseCase "consultar tabla servicios"
 						quid       	"5AE8B2890249")
-					    (object Association "$UNNAMED$211"
+					    (object Association "$UNNAMED$216"
 						quid       	"5AE8A83F020C"
 						roles      	(list role_list
-						    (object Role "$UNNAMED$212"
+						    (object Role "$UNNAMED$217"
 							quid       	"5AE8A8400038"
 							supplier   	"Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas"
 							quidu      	"5AE8A830023A"
 							is_navigable 	TRUE)
-						    (object Role "$UNNAMED$213"
+						    (object Role "$UNNAMED$218"
 							quid       	"5AE8A840003A"
 							supplier   	"Use Case View::Use-Case Model::sofvet::modulo mantenimiento::cliente::empleado"
 							quidu      	"5ADD249B00EC"
@@ -23408,7 +24491,7 @@
 						origin_x   	0
 						origin_y   	0
 						items      	(list diagram_item_list
-						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas" @1026
+						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar citas" @1071
 							location   	(992, 1472)
 							font       	(object Font
 							    size       	9
@@ -23420,7 +24503,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@1026
+							    Parent_View 	@1071
 							    location   	(992, 1610)
 							    anchor_loc 	1
 							    nlines     	2
@@ -23432,7 +24515,7 @@
 							fill_color 	13434879
 							quidu      	"5AE8A830023A"
 							height     	118)
-						    (object ClassView "Class" "Use Case View::Use-Case Model::sofvet::modulo mantenimiento::cliente::empleado" @1027
+						    (object ClassView "Class" "Use Case View::Use-Case Model::sofvet::modulo mantenimiento::cliente::empleado" @1072
 							ShowCompartmentStereotypes 	TRUE
 							IncludeAttribute 	TRUE
 							IncludeOperation 	TRUE
@@ -23447,7 +24530,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@1027
+							    Parent_View 	@1072
 							    location   	(368, 1632)
 							    anchor_loc 	1
 							    nlines     	2
@@ -23460,37 +24543,37 @@
 							quidu      	"5ADD249B00EC"
 							annotation 	8
 							autoResize 	TRUE)
-						    (object AssociationViewNew "$UNNAMED$211" @1028
+						    (object AssociationViewNew "$UNNAMED$216" @1073
 							location   	(653, 1472)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5AE8A83F020C"
 							roleview_list 	(list RoleViews
-							    (object RoleView "$UNNAMED$212" @1029
-								Parent_View 	@1028
+							    (object RoleView "$UNNAMED$217" @1074
+								Parent_View 	@1073
 								location   	(317, 832)
 								stereotype 	TRUE
 								line_color 	3342489
 								quidu      	"5AE8A8400038"
-								client     	@1028
-								supplier   	@1026
+								client     	@1073
+								supplier   	@1071
 								vertices   	(list Points
 								    (653, 1472)
 								    (882, 1472))
 								line_style 	0)
-							    (object RoleView "$UNNAMED$213" @1030
-								Parent_View 	@1028
+							    (object RoleView "$UNNAMED$218" @1075
+								Parent_View 	@1073
 								location   	(317, 832)
 								stereotype 	TRUE
 								line_color 	3342489
 								quidu      	"5AE8A840003A"
-								client     	@1028
-								supplier   	@1027
+								client     	@1073
+								supplier   	@1072
 								vertices   	(list Points
 								    (653, 1472)
 								    (425, 1472))
 								line_style 	0)))
-						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar adicionar citas" @1031
+						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar adicionar citas" @1076
 							location   	(1312, 1008)
 							font       	(object Font
 							    size       	9
@@ -23502,7 +24585,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@1031
+							    Parent_View 	@1076
 							    location   	(1312, 1146)
 							    anchor_loc 	1
 							    nlines     	2
@@ -23514,7 +24597,7 @@
 							fill_color 	13434879
 							quidu      	"5AE8A8840017"
 							height     	118)
-						    (object DependencyView "" @1032
+						    (object DependencyView "" @1077
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -23524,8 +24607,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1033
-							    Parent_View 	@1032
+							stereotype 	(object SegLabel @1078
+							    Parent_View 	@1077
 							    location   	(1215, 1286)
 							    font       	(object Font
 								size       	9
@@ -23547,13 +24630,13 @@
 							    orientation 	0)
 							line_color 	3342489
 							quidu      	"5AE8A89D0361"
-							client     	@1031
-							supplier   	@1026
+							client     	@1076
+							supplier   	@1071
 							vertices   	(list Points
 							    (1197, 1169)
 							    (1028, 1413))
 							line_style 	0)
-						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo servicios::citas::conusultar tabla cliente" @1034
+						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo servicios::citas::conusultar tabla cliente" @1079
 							location   	(1312, 384)
 							font       	(object Font
 							    size       	9
@@ -23565,7 +24648,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@1034
+							    Parent_View 	@1079
 							    location   	(1312, 522)
 							    anchor_loc 	1
 							    nlines     	2
@@ -23577,7 +24660,7 @@
 							fill_color 	13434879
 							quidu      	"5AE8AC240243"
 							height     	118)
-						    (object DependencyView "" @1035
+						    (object DependencyView "" @1080
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -23587,8 +24670,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1036
-							    Parent_View 	@1035
+							stereotype 	(object SegLabel @1081
+							    Parent_View 	@1080
 							    location   	(1205, 747)
 							    font       	(object Font
 								size       	9
@@ -23610,13 +24693,13 @@
 							    orientation 	0)
 							line_color 	3342489
 							quidu      	"5AE8ADC400A4"
-							client     	@1031
-							supplier   	@1034
+							client     	@1076
+							supplier   	@1079
 							vertices   	(list Points
 							    (1312, 949)
 							    (1312, 545))
 							line_style 	0)
-						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo servicios::citas::consultar tabla mascota" @1037
+						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo servicios::citas::consultar tabla mascota" @1082
 							location   	(2208, 384)
 							font       	(object Font
 							    size       	9
@@ -23628,7 +24711,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@1037
+							    Parent_View 	@1082
 							    location   	(2208, 522)
 							    anchor_loc 	1
 							    nlines     	2
@@ -23640,7 +24723,7 @@
 							fill_color 	13434879
 							quidu      	"5AE8ADD60331"
 							height     	118)
-						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo servicios::citas::consultar tabla citas" @1038
+						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo servicios::citas::consultar tabla citas" @1083
 							location   	(1632, 1472)
 							font       	(object Font
 							    size       	9
@@ -23652,7 +24735,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@1038
+							    Parent_View 	@1083
 							    location   	(1632, 1610)
 							    anchor_loc 	1
 							    nlines     	2
@@ -23664,7 +24747,7 @@
 							fill_color 	13434879
 							quidu      	"5AE8B1650338"
 							height     	118)
-						    (object DependencyView "" @1039
+						    (object DependencyView "" @1084
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -23674,8 +24757,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1040
-							    Parent_View 	@1039
+							stereotype 	(object SegLabel @1085
+							    Parent_View 	@1084
 							    location   	(1311, 1580)
 							    font       	(object Font
 								size       	9
@@ -23697,13 +24780,13 @@
 							    orientation 	0)
 							line_color 	3342489
 							quidu      	"5AE8B18001B3"
-							client     	@1038
-							supplier   	@1026
+							client     	@1083
+							supplier   	@1071
 							vertices   	(list Points
 							    (1522, 1472)
 							    (1100, 1472))
 							line_style 	0)
-						    (object DependencyView "" @1041
+						    (object DependencyView "" @1086
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -23713,8 +24796,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1042
-							    Parent_View 	@1041
+							stereotype 	(object SegLabel @1087
+							    Parent_View 	@1086
 							    location   	(1418, 1352)
 							    font       	(object Font
 								size       	9
@@ -23736,13 +24819,13 @@
 							    orientation 	0)
 							line_color 	3342489
 							quidu      	"5AE8B19A0260"
-							client     	@1038
-							supplier   	@1031
+							client     	@1083
+							supplier   	@1076
 							vertices   	(list Points
 							    (1590, 1413)
 							    (1422, 1169))
 							line_style 	0)
-						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo servicios::citas::actualizar tabla citas" @1043
+						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo servicios::citas::actualizar tabla citas" @1088
 							location   	(2384, 1504)
 							font       	(object Font
 							    size       	9
@@ -23754,7 +24837,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@1043
+							    Parent_View 	@1088
 							    location   	(2384, 1642)
 							    anchor_loc 	1
 							    nlines     	2
@@ -23766,7 +24849,7 @@
 							fill_color 	13434879
 							quidu      	"5AE8B1A30178"
 							height     	118)
-						    (object DependencyView "" @1044
+						    (object DependencyView "" @1089
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -23776,8 +24859,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1045
-							    Parent_View 	@1044
+							stereotype 	(object SegLabel @1090
+							    Parent_View 	@1089
 							    location   	(1928, 1370)
 							    font       	(object Font
 								size       	9
@@ -23799,13 +24882,13 @@
 							    orientation 	1)
 							line_color 	3342489
 							quidu      	"5AE8B1BC008B"
-							client     	@1031
-							supplier   	@1043
+							client     	@1076
+							supplier   	@1088
 							vertices   	(list Points
 							    (1632, 1153)
 							    (2274, 1451))
 							line_style 	0)
-						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar actualizar cita" @1046
+						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo servicios::citas::gestionar actualizar cita" @1091
 							location   	(1312, 1904)
 							font       	(object Font
 							    size       	9
@@ -23817,7 +24900,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@1046
+							    Parent_View 	@1091
 							    location   	(1312, 2042)
 							    anchor_loc 	1
 							    nlines     	2
@@ -23829,7 +24912,7 @@
 							fill_color 	13434879
 							quidu      	"5AE8B1EF0364"
 							height     	118)
-						    (object DependencyView "" @1047
+						    (object DependencyView "" @1092
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -23839,8 +24922,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1048
-							    Parent_View 	@1047
+							stereotype 	(object SegLabel @1093
+							    Parent_View 	@1092
 							    location   	(1518, 1805)
 							    font       	(object Font
 								size       	9
@@ -23862,13 +24945,13 @@
 							    orientation 	0)
 							line_color 	3342489
 							quidu      	"5AE8B2110355"
-							client     	@1038
-							supplier   	@1046
+							client     	@1083
+							supplier   	@1091
 							vertices   	(list Points
 							    (1513, 1633)
 							    (1350, 1846))
 							line_style 	0)
-						    (object DependencyView "" @1049
+						    (object DependencyView "" @1094
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -23878,8 +24961,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1050
-							    Parent_View 	@1049
+							stereotype 	(object SegLabel @1095
+							    Parent_View 	@1094
 							    location   	(1103, 1804)
 							    font       	(object Font
 								size       	9
@@ -23901,13 +24984,13 @@
 							    orientation 	0)
 							line_color 	3342489
 							quidu      	"5AE8B1FF0173"
-							client     	@1046
-							supplier   	@1026
+							client     	@1091
+							supplier   	@1071
 							vertices   	(list Points
 							    (1268, 1846)
 							    (1110, 1633))
 							line_style 	0)
-						    (object DependencyView "" @1051
+						    (object DependencyView "" @1096
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -23917,8 +25000,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1052
-							    Parent_View 	@1051
+							stereotype 	(object SegLabel @1097
+							    Parent_View 	@1096
 							    location   	(2021, 1796)
 							    font       	(object Font
 								size       	9
@@ -23940,14 +25023,14 @@
 							    orientation 	0)
 							line_color 	3342489
 							quidu      	"5AE8B22A019C"
-							client     	@1046
-							supplier   	@1043
+							client     	@1091
+							supplier   	@1088
 							vertices   	(list Points
 							    (1420, 1902)
 							    (2383, 1903)
 							    (2382, 1665))
 							line_style 	0)
-						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo servicios::citas::consultar tabla area" @1053
+						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo servicios::citas::consultar tabla area" @1098
 							location   	(1792, 672)
 							font       	(object Font
 							    size       	9
@@ -23959,7 +25042,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@1053
+							    Parent_View 	@1098
 							    location   	(1792, 810)
 							    anchor_loc 	1
 							    nlines     	2
@@ -23971,7 +25054,7 @@
 							fill_color 	13434879
 							quidu      	"5AE8B2720019"
 							height     	118)
-						    (object DependencyView "" @1054
+						    (object DependencyView "" @1099
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -23981,8 +25064,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1055
-							    Parent_View 	@1054
+							stereotype 	(object SegLabel @1100
+							    Parent_View 	@1099
 							    location   	(1446, 781)
 							    font       	(object Font
 								size       	9
@@ -24004,13 +25087,13 @@
 							    orientation 	0)
 							line_color 	3342489
 							quidu      	"5AE8B27E0113"
-							client     	@1031
-							supplier   	@1053
+							client     	@1076
+							supplier   	@1098
 							vertices   	(list Points
 							    (1389, 949)
 							    (1560, 833))
 							line_style 	0)
-						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo servicios::citas::consultar tabla servicios" @1056
+						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo servicios::citas::consultar tabla servicios" @1101
 							location   	(2768, 672)
 							font       	(object Font
 							    size       	9
@@ -24022,7 +25105,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@1056
+							    Parent_View 	@1101
 							    location   	(2768, 810)
 							    anchor_loc 	1
 							    nlines     	2
@@ -24034,7 +25117,7 @@
 							fill_color 	13434879
 							quidu      	"5AE8B2890249"
 							height     	118)
-						    (object DependencyView "" @1057
+						    (object DependencyView "" @1102
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -24044,8 +25127,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1058
-							    Parent_View 	@1057
+							stereotype 	(object SegLabel @1103
+							    Parent_View 	@1102
 							    location   	(2304, 709)
 							    font       	(object Font
 								size       	9
@@ -24067,13 +25150,13 @@
 							    orientation 	1)
 							line_color 	3342489
 							quidu      	"5AE8B2A002AD"
-							client     	@1053
-							supplier   	@1056
+							client     	@1098
+							supplier   	@1101
 							vertices   	(list Points
 							    (1900, 672)
 							    (2657, 672))
 							line_style 	0)
-						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo mantenimiento::empleado::consultar tabla empleado" @1059
+						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo mantenimiento::empleado::consultar tabla empleado" @1104
 							location   	(2448, 1008)
 							font       	(object Font
 							    size       	9
@@ -24085,7 +25168,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@1059
+							    Parent_View 	@1104
 							    location   	(2448, 1146)
 							    anchor_loc 	1
 							    nlines     	2
@@ -24097,7 +25180,7 @@
 							fill_color 	13434879
 							quidu      	"5ADE03C403CF"
 							height     	118)
-						    (object DependencyView "" @1060
+						    (object DependencyView "" @1105
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -24107,8 +25190,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1061
-							    Parent_View 	@1060
+							stereotype 	(object SegLabel @1106
+							    Parent_View 	@1105
 							    location   	(1906, 1041)
 							    font       	(object Font
 								size       	9
@@ -24130,13 +25213,13 @@
 							    orientation 	1)
 							line_color 	3342489
 							quidu      	"5AE8B3A00378"
-							client     	@1031
-							supplier   	@1059
+							client     	@1076
+							supplier   	@1104
 							vertices   	(list Points
 							    (1420, 1008)
 							    (2338, 1008))
 							line_style 	0)
-						    (object DependencyView "" @1062
+						    (object DependencyView "" @1107
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -24146,8 +25229,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1063
-							    Parent_View 	@1062
+							stereotype 	(object SegLabel @1108
+							    Parent_View 	@1107
 							    location   	(1759, 328)
 							    font       	(object Font
 								size       	9
@@ -24169,13 +25252,13 @@
 							    orientation 	0)
 							line_color 	3342489
 							quidu      	"5AE8ADDA02A6"
-							client     	@1034
-							supplier   	@1037
+							client     	@1079
+							supplier   	@1082
 							vertices   	(list Points
 							    (1420, 384)
 							    (2098, 384))
 							line_style 	0)
-						    (object Label @1064
+						    (object Label @1109
 							location   	(160, 144)
 							font       	(object Font
 							    size       	12
@@ -24200,7 +25283,7 @@
 					origin_x   	0
 					origin_y   	0
 					items      	(list diagram_item_list
-					    (object CategoryView "Use Case View::Use-Case Model::sofvet::modulo servicios::citas" @1065
+					    (object CategoryView "Use Case View::Use-Case Model::sofvet::modulo servicios::citas" @1110
 						location   	(896, 576)
 						font       	(object Font
 						    size       	9
@@ -24212,7 +25295,7 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@1065
+						    Parent_View 	@1110
 						    location   	(752, 539)
 						    fill_color 	13434879
 						    nlines     	2
@@ -24220,7 +25303,7 @@
 						    justify    	0
 						    label      	"citas")
 						stereotype 	(object ItemLabel
-						    Parent_View 	@1065
+						    Parent_View 	@1110
 						    location   	(752, 492)
 						    fill_color 	13434879
 						    anchor     	10
@@ -24303,15 +25386,15 @@
 						quid       	"5ADE42F60025")
 					    (object UseCase "consultar tabla ingreso"
 						quid       	"5ADE433502B7")
-					    (object Association "$UNNAMED$214"
+					    (object Association "$UNNAMED$219"
 						quid       	"5ADE42C600C0"
 						roles      	(list role_list
-						    (object Role "$UNNAMED$215"
+						    (object Role "$UNNAMED$220"
 							quid       	"5ADE42C70004"
 							supplier   	"Use Case View::Use-Case Model::sofvet::modulo almacen::ingreso articulos::gestinar ingreso articulo"
 							quidu      	"5ADE41750295"
 							is_navigable 	TRUE)
-						    (object Role "$UNNAMED$216"
+						    (object Role "$UNNAMED$221"
 							quid       	"5ADE42C70006"
 							supplier   	"Use Case View::Use-Case Model::sofvet::modulo mantenimiento::cliente::empleado"
 							quidu      	"5ADD249B00EC"
@@ -24326,7 +25409,7 @@
 						origin_x   	69
 						origin_y   	138
 						items      	(list diagram_item_list
-						    (object Label @1066
+						    (object Label @1111
 							location   	(209, 175)
 							font       	(object Font
 							    size       	9
@@ -24341,7 +25424,7 @@
 							max_width  	1163
 							justify    	1
 							label      	"diagrama de caso de uso -almacen -  ingreso de articulo")
-						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo almacen::ingreso articulos::gestionar adicionar ingreso articulo" @1067
+						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo almacen::ingreso articulos::gestionar adicionar ingreso articulo" @1112
 							location   	(1520, 400)
 							font       	(object Font
 							    size       	9
@@ -24353,7 +25436,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@1067
+							    Parent_View 	@1112
 							    location   	(1520, 538)
 							    anchor_loc 	1
 							    nlines     	2
@@ -24365,7 +25448,7 @@
 							fill_color 	13434879
 							quidu      	"5ADE4186017C"
 							height     	118)
-						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo mantenimiento::articulo::consultar tabla articulo" @1068
+						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo mantenimiento::articulo::consultar tabla articulo" @1113
 							location   	(1920, 992)
 							font       	(object Font
 							    size       	9
@@ -24377,7 +25460,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@1068
+							    Parent_View 	@1113
 							    location   	(1920, 1130)
 							    anchor_loc 	1
 							    nlines     	2
@@ -24389,7 +25472,7 @@
 							fill_color 	13434879
 							quidu      	"5ADD305A00D6"
 							height     	118)
-						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo mantenimiento::proveedor::consultar tabla proveedor" @1069
+						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo mantenimiento::proveedor::consultar tabla proveedor" @1114
 							location   	(2192, 688)
 							font       	(object Font
 							    size       	9
@@ -24401,7 +25484,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@1069
+							    Parent_View 	@1114
 							    location   	(2192, 826)
 							    anchor_loc 	1
 							    nlines     	2
@@ -24412,7 +25495,7 @@
 							line_color 	3342489
 							fill_color 	13434879
 							quidu      	"5ADE05590200")
-						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo almacen::ingreso articulos::gestionar anular ingreso articulo" @1070
+						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo almacen::ingreso articulos::gestionar anular ingreso articulo" @1115
 							location   	(1520, 1440)
 							font       	(object Font
 							    size       	9
@@ -24424,7 +25507,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@1070
+							    Parent_View 	@1115
 							    location   	(1520, 1578)
 							    anchor_loc 	1
 							    nlines     	2
@@ -24436,7 +25519,7 @@
 							fill_color 	13434879
 							quidu      	"5ADE429800BA"
 							height     	118)
-						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo almacen::ingreso articulos::gestinar ingreso articulo" @1071
+						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo almacen::ingreso articulos::gestinar ingreso articulo" @1116
 							location   	(800, 928)
 							font       	(object Font
 							    size       	9
@@ -24448,7 +25531,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@1071
+							    Parent_View 	@1116
 							    location   	(800, 1066)
 							    anchor_loc 	1
 							    nlines     	2
@@ -24460,7 +25543,7 @@
 							fill_color 	13434879
 							quidu      	"5ADE41750295"
 							height     	118)
-						    (object ClassView "Class" "Use Case View::Use-Case Model::sofvet::modulo mantenimiento::cliente::empleado" @1072
+						    (object ClassView "Class" "Use Case View::Use-Case Model::sofvet::modulo mantenimiento::cliente::empleado" @1117
 							ShowCompartmentStereotypes 	TRUE
 							IncludeAttribute 	TRUE
 							IncludeOperation 	TRUE
@@ -24475,7 +25558,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@1072
+							    Parent_View 	@1117
 							    location   	(176, 1088)
 							    anchor_loc 	1
 							    nlines     	2
@@ -24488,37 +25571,37 @@
 							quidu      	"5ADD249B00EC"
 							annotation 	8
 							autoResize 	TRUE)
-						    (object AssociationViewNew "$UNNAMED$214" @1073
+						    (object AssociationViewNew "$UNNAMED$219" @1118
 							location   	(461, 928)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5ADE42C600C0"
 							roleview_list 	(list RoleViews
-							    (object RoleView "$UNNAMED$215" @1074
-								Parent_View 	@1073
+							    (object RoleView "$UNNAMED$220" @1119
+								Parent_View 	@1118
 								location   	(285, 0)
 								stereotype 	TRUE
 								line_color 	3342489
 								quidu      	"5ADE42C70004"
-								client     	@1073
-								supplier   	@1071
+								client     	@1118
+								supplier   	@1116
 								vertices   	(list Points
 								    (461, 928)
 								    (690, 928))
 								line_style 	0)
-							    (object RoleView "$UNNAMED$216" @1075
-								Parent_View 	@1073
+							    (object RoleView "$UNNAMED$221" @1120
+								Parent_View 	@1118
 								location   	(285, 0)
 								stereotype 	TRUE
 								line_color 	3342489
 								quidu      	"5ADE42C70006"
-								client     	@1073
-								supplier   	@1072
+								client     	@1118
+								supplier   	@1117
 								vertices   	(list Points
 								    (461, 928)
 								    (233, 928))
 								line_style 	0)))
-						    (object DependencyView "" @1076
+						    (object DependencyView "" @1121
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -24528,8 +25611,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1077
-							    Parent_View 	@1076
+							stereotype 	(object SegLabel @1122
+							    Parent_View 	@1121
 							    location   	(1151, 802)
 							    font       	(object Font
 								size       	9
@@ -24551,13 +25634,13 @@
 							    orientation 	0)
 							line_color 	3342489
 							quidu      	"5ADE42CE00EF"
-							client     	@1067
-							supplier   	@1071
+							client     	@1112
+							supplier   	@1116
 							vertices   	(list Points
 							    (1299, 561)
 							    (875, 870))
 							line_style 	0)
-						    (object DependencyView "" @1078
+						    (object DependencyView "" @1123
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -24567,8 +25650,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1079
-							    Parent_View 	@1078
+							stereotype 	(object SegLabel @1124
+							    Parent_View 	@1123
 							    location   	(1160, 1315)
 							    font       	(object Font
 								size       	9
@@ -24590,13 +25673,13 @@
 							    orientation 	0)
 							line_color 	3342489
 							quidu      	"5ADE42D20053"
-							client     	@1070
-							supplier   	@1071
+							client     	@1115
+							supplier   	@1116
 							vertices   	(list Points
 							    (1438, 1382)
 							    (1026, 1089))
 							line_style 	0)
-						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo almacen::ingreso articulos::actualizar tabla ingreso" @1080
+						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo almacen::ingreso articulos::actualizar tabla ingreso" @1125
 							location   	(2528, 400)
 							font       	(object Font
 							    size       	9
@@ -24608,7 +25691,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@1080
+							    Parent_View 	@1125
 							    location   	(2528, 538)
 							    anchor_loc 	1
 							    nlines     	2
@@ -24620,7 +25703,7 @@
 							fill_color 	13434879
 							quidu      	"5ADE42E50341"
 							height     	118)
-						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo almacen::ingreso articulos::actualizar tabla detalle ingreso" @1081
+						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo almacen::ingreso articulos::actualizar tabla detalle ingreso" @1126
 							location   	(2528, 1072)
 							font       	(object Font
 							    size       	9
@@ -24632,7 +25715,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@1081
+							    Parent_View 	@1126
 							    location   	(2528, 1210)
 							    anchor_loc 	1
 							    nlines     	2
@@ -24644,7 +25727,7 @@
 							fill_color 	13434879
 							quidu      	"5ADE42F60025"
 							height     	118)
-						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo almacen::ingreso articulos::consultar tabla ingreso" @1082
+						    (object UseCaseView "Use Case View::Use-Case Model::sofvet::modulo almacen::ingreso articulos::consultar tabla ingreso" @1127
 							location   	(1520, 960)
 							font       	(object Font
 							    size       	9
@@ -24656,7 +25739,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@1082
+							    Parent_View 	@1127
 							    location   	(1520, 1098)
 							    anchor_loc 	1
 							    nlines     	2
@@ -24668,7 +25751,7 @@
 							fill_color 	13434879
 							quidu      	"5ADE433502B7"
 							height     	118)
-						    (object DependencyView "" @1083
+						    (object DependencyView "" @1128
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -24678,8 +25761,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1084
-							    Parent_View 	@1083
+							stereotype 	(object SegLabel @1129
+							    Parent_View 	@1128
 							    location   	(1992, 484)
 							    font       	(object Font
 								size       	9
@@ -24701,13 +25784,13 @@
 							    orientation 	0)
 							line_color 	3342489
 							quidu      	"5ADE4397031E"
-							client     	@1067
-							supplier   	@1069
+							client     	@1112
+							supplier   	@1114
 							vertices   	(list Points
 							    (1840, 535)
 							    (2082, 639))
 							line_style 	0)
-						    (object DependencyView "" @1085
+						    (object DependencyView "" @1130
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -24717,8 +25800,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1086
-							    Parent_View 	@1085
+							stereotype 	(object SegLabel @1131
+							    Parent_View 	@1130
 							    location   	(1842, 687)
 							    font       	(object Font
 								size       	9
@@ -24740,13 +25823,13 @@
 							    orientation 	0)
 							line_color 	3342489
 							quidu      	"5ADE439F0001"
-							client     	@1067
-							supplier   	@1068
+							client     	@1112
+							supplier   	@1113
 							vertices   	(list Points
 							    (1627, 561)
 							    (1879, 933))
 							line_style 	0)
-						    (object DependencyView "" @1087
+						    (object DependencyView "" @1132
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -24756,8 +25839,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1088
-							    Parent_View 	@1087
+							stereotype 	(object SegLabel @1133
+							    Parent_View 	@1132
 							    location   	(2023, 293)
 							    font       	(object Font
 								size       	9
@@ -24779,13 +25862,13 @@
 							    orientation 	0)
 							line_color 	3342489
 							quidu      	"5ADE43B60189"
-							client     	@1067
-							supplier   	@1080
+							client     	@1112
+							supplier   	@1125
 							vertices   	(list Points
 							    (1628, 400)
 							    (2417, 400))
 							line_style 	0)
-						    (object DependencyView "" @1089
+						    (object DependencyView "" @1134
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -24795,8 +25878,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1090
-							    Parent_View 	@1089
+							stereotype 	(object SegLabel @1135
+							    Parent_View 	@1134
 							    location   	(2636, 788)
 							    font       	(object Font
 								size       	9
@@ -24818,13 +25901,13 @@
 							    orientation 	0)
 							line_color 	3342489
 							quidu      	"5ADE43C4018B"
-							client     	@1080
-							supplier   	@1081
+							client     	@1125
+							supplier   	@1126
 							vertices   	(list Points
 							    (2528, 561)
 							    (2528, 1014))
 							line_style 	0)
-						    (object DependencyView "" @1091
+						    (object DependencyView "" @1136
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -24834,8 +25917,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1092
-							    Parent_View 	@1091
+							stereotype 	(object SegLabel @1137
+							    Parent_View 	@1136
 							    location   	(1628, 731)
 							    font       	(object Font
 								size       	9
@@ -24857,13 +25940,13 @@
 							    orientation 	0)
 							line_color 	3342489
 							quidu      	"5ADE468101D4"
-							client     	@1067
-							supplier   	@1082
+							client     	@1112
+							supplier   	@1127
 							vertices   	(list Points
 							    (1520, 561)
 							    (1520, 901))
 							line_style 	0)
-						    (object DependencyView "" @1093
+						    (object DependencyView "" @1138
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -24873,8 +25956,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1094
-							    Parent_View 	@1093
+							stereotype 	(object SegLabel @1139
+							    Parent_View 	@1138
 							    location   	(1413, 1252)
 							    font       	(object Font
 								size       	9
@@ -24896,13 +25979,13 @@
 							    orientation 	0)
 							line_color 	3342489
 							quidu      	"5ADE46880206"
-							client     	@1070
-							supplier   	@1082
+							client     	@1115
+							supplier   	@1127
 							vertices   	(list Points
 							    (1520, 1382)
 							    (1520, 1121))
 							line_style 	0)
-						    (object DependencyView "" @1095
+						    (object DependencyView "" @1140
 							font       	(object Font
 							    size       	9
 							    face       	"Arial"
@@ -24912,8 +25995,8 @@
 							    strike     	FALSE
 							    color      	0
 							    default_color 	TRUE)
-							stereotype 	(object SegLabel @1096
-							    Parent_View 	@1095
+							stereotype 	(object SegLabel @1141
+							    Parent_View 	@1140
 							    location   	(2705, 1424)
 							    font       	(object Font
 								size       	9
@@ -24935,8 +26018,8 @@
 							    orientation 	0)
 							line_color 	3342489
 							quidu      	"5ADE46A20238"
-							client     	@1070
-							supplier   	@1080
+							client     	@1115
+							supplier   	@1125
 							vertices   	(list Points
 							    (1628, 1439)
 							    (2812, 1444)
@@ -24953,7 +26036,7 @@
 					origin_x   	0
 					origin_y   	0
 					items      	(list diagram_item_list
-					    (object CategoryView "Use Case View::Use-Case Model::sofvet::modulo almacen::ingreso articulos" @1097
+					    (object CategoryView "Use Case View::Use-Case Model::sofvet::modulo almacen::ingreso articulos" @1142
 						location   	(832, 528)
 						font       	(object Font
 						    size       	9
@@ -24965,7 +26048,7 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@1097
+						    Parent_View 	@1142
 						    location   	(688, 491)
 						    fill_color 	13434879
 						    nlines     	2
@@ -24973,7 +26056,7 @@
 						    justify    	0
 						    label      	"ingreso articulos")
 						stereotype 	(object ItemLabel
-						    Parent_View 	@1097
+						    Parent_View 	@1142
 						    location   	(688, 444)
 						    fill_color 	13434879
 						    anchor     	10
@@ -24987,7 +26070,7 @@
 						quidu      	"5ADD334C01FA"
 						width      	300
 						height     	180)
-					    (object Label @1098
+					    (object Label @1143
 						location   	(400, 208)
 						font       	(object Font
 						    size       	14
@@ -25012,7 +26095,7 @@
 				origin_x   	0
 				origin_y   	0
 				items      	(list diagram_item_list
-				    (object CategoryView "Use Case View::Use-Case Model::sofvet::modulo mantenimiento" @1099
+				    (object CategoryView "Use Case View::Use-Case Model::sofvet::modulo mantenimiento" @1144
 					location   	(640, 496)
 					font       	(object Font
 					    size       	9
@@ -25024,7 +26107,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@1099
+					    Parent_View 	@1144
 					    location   	(494, 412)
 					    fill_color 	13434879
 					    nlines     	2
@@ -25037,7 +26120,7 @@
 					quidu      	"5ADD00010012"
 					width      	304
 					height     	180)
-				    (object CategoryView "Use Case View::Use-Case Model::sofvet::modulo venta" @1100
+				    (object CategoryView "Use Case View::Use-Case Model::sofvet::modulo venta" @1145
 					location   	(1264, 496)
 					font       	(object Font
 					    size       	9
@@ -25049,7 +26132,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@1100
+					    Parent_View 	@1145
 					    location   	(1120, 412)
 					    fill_color 	13434879
 					    nlines     	2
@@ -25062,7 +26145,7 @@
 					quidu      	"5ADD001A0173"
 					width      	300
 					height     	180)
-				    (object CategoryView "Use Case View::Use-Case Model::sofvet::modulo servicios" @1101
+				    (object CategoryView "Use Case View::Use-Case Model::sofvet::modulo servicios" @1146
 					location   	(640, 816)
 					font       	(object Font
 					    size       	9
@@ -25074,7 +26157,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@1101
+					    Parent_View 	@1146
 					    location   	(496, 732)
 					    fill_color 	13434879
 					    nlines     	2
@@ -25087,7 +26170,7 @@
 					quidu      	"5ADD0026010C"
 					width      	300
 					height     	180)
-				    (object Label @1102
+				    (object Label @1147
 					location   	(464, 192)
 					font       	(object Font
 					    size       	14
@@ -25102,7 +26185,7 @@
 					max_width  	988
 					justify    	1
 					label      	"modulos del sistema veterinaria")
-				    (object CategoryView "Use Case View::Use-Case Model::sofvet::modulo almacen" @1103
+				    (object CategoryView "Use Case View::Use-Case Model::sofvet::modulo almacen" @1148
 					location   	(1296, 816)
 					font       	(object Font
 					    size       	9
@@ -25114,7 +26197,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@1103
+					    Parent_View 	@1148
 					    location   	(1152, 732)
 					    fill_color 	13434879
 					    nlines     	2
@@ -25138,7 +26221,7 @@
 			origin_x   	0
 			origin_y   	0
 			items      	(list diagram_item_list
-			    (object NoteView @1104
+			    (object NoteView @1149
 				location   	(448, 304)
 				font       	(object Font
 				    size       	9
@@ -25150,7 +26233,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@1104
+				    Parent_View 	@1149
 				    location   	(38, 23)
 				    fill_color 	13434879
 				    nlines     	12
@@ -25171,7 +26254,7 @@
 				fill_color 	13434879
 				width      	844
 				height     	574)
-			    (object ClassView "Class" "Use Case View::Use-Case Model::Actors::<Actor Name>" @1105
+			    (object ClassView "Class" "Use Case View::Use-Case Model::Actors::<Actor Name>" @1150
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
@@ -25186,7 +26269,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@1105
+				    Parent_View 	@1150
 				    location   	(528, 1136)
 				    anchor_loc 	1
 				    nlines     	2
@@ -25199,7 +26282,7 @@
 				quidu      	"353D5816026C"
 				annotation 	8
 				autoResize 	TRUE)
-			    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::<Use Case Name>::<Use Case Name>" @1106
+			    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::<Use Case Name>::<Use Case Name>" @1151
 				location   	(1264, 976)
 				font       	(object Font
 				    size       	9
@@ -25211,7 +26294,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@1106
+				    Parent_View 	@1151
 				    location   	(1264, 1114)
 				    anchor_loc 	1
 				    nlines     	2
@@ -25223,7 +26306,7 @@
 				fill_color 	13434879
 				quidu      	"34E37FB203D4"
 				autoResize 	TRUE)
-			    (object AssociationViewNew "$UNNAMED$132" @1107
+			    (object AssociationViewNew "$UNNAMED$132" @1152
 				location   	(868, 976)
 				font       	(object Font
 				    size       	9
@@ -25234,8 +26317,8 @@
 				    strike     	FALSE
 				    color      	0
 				    default_color 	TRUE)
-				stereotype 	(object SegLabel @1108
-				    Parent_View 	@1107
+				stereotype 	(object SegLabel @1153
+				    Parent_View 	@1152
 				    location   	(886, 1013)
 				    font       	(object Font
 					size       	9
@@ -25258,8 +26341,8 @@
 				line_color 	3342489
 				quidu      	"35C0ED3A00F0"
 				roleview_list 	(list RoleViews
-				    (object RoleView "$UNNAMED$134" @1109
-					Parent_View 	@1107
+				    (object RoleView "$UNNAMED$134" @1154
+					Parent_View 	@1152
 					location   	(-284, 48)
 					font       	(object Font
 					    size       	9
@@ -25270,8 +26353,8 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					label      	(object SegLabel @1110
-					    Parent_View 	@1109
+					label      	(object SegLabel @1155
+					    Parent_View 	@1154
 					    location   	(643, 935)
 					    font       	(object Font
 						size       	9
@@ -25295,14 +26378,14 @@
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"35C0ED3B0119"
-					client     	@1107
-					supplier   	@1105
+					client     	@1152
+					supplier   	@1150
 					vertices   	(list Points
 					    (868, 976)
 					    (585, 976))
 					line_style 	0)
-				    (object RoleView "$UNNAMED$133" @1111
-					Parent_View 	@1107
+				    (object RoleView "$UNNAMED$133" @1156
+					Parent_View 	@1152
 					location   	(-284, 48)
 					font       	(object Font
 					    size       	9
@@ -25313,8 +26396,8 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					label      	(object SegLabel @1112
-					    Parent_View 	@1111
+					label      	(object SegLabel @1157
+					    Parent_View 	@1156
 					    location   	(1096, 935)
 					    font       	(object Font
 						size       	9
@@ -25338,8 +26421,8 @@
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"35C0ED3B0118"
-					client     	@1107
-					supplier   	@1106
+					client     	@1152
+					supplier   	@1151
 					vertices   	(list Points
 					    (868, 976)
 					    (1154, 976))
@@ -25353,7 +26436,7 @@
 			origin_x   	0
 			origin_y   	0
 			items      	(list diagram_item_list
-			    (object CategoryView "Use Case View::Use-Case Model::sofvet" @1113
+			    (object CategoryView "Use Case View::Use-Case Model::sofvet" @1158
 				location   	(1024, 672)
 				font       	(object Font
 				    size       	9
@@ -25365,7 +26448,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@1113
+				    Parent_View 	@1158
 				    location   	(880, 588)
 				    fill_color 	13434879
 				    nlines     	2
@@ -25378,7 +26461,7 @@
 				quidu      	"5ADCFFF2003B"
 				width      	300
 				height     	180)
-			    (object Label @1114
+			    (object Label @1159
 				location   	(864, 368)
 				font       	(object Font
 				    size       	9
@@ -25406,7 +26489,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object CategoryView "Use Case View::Use-Case Model" @1115
+		    (object CategoryView "Use Case View::Use-Case Model" @1160
 			location   	(384, 880)
 			font       	(object Font
 			    size       	10
@@ -25418,7 +26501,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1115
+			    Parent_View 	@1160
 			    location   	(189, 779)
 			    fill_color 	13434879
 			    nlines     	2
@@ -25431,7 +26514,7 @@
 			quidu      	"35B677F4010E"
 			width      	402
 			height     	215)
-		    (object NoteView @1116
+		    (object NoteView @1161
 			location   	(1040, 560)
 			font       	(object Font
 			    size       	10
@@ -25443,7 +26526,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1116
+			    Parent_View 	@1161
 			    location   	(813, 358)
 			    fill_color 	13434879
 			    nlines     	9
@@ -25454,7 +26537,7 @@
 			fill_color 	13434879
 			width      	479
 			height     	416)
-		    (object CategoryView "Use Case View::Business Use-Case Model" @1117
+		    (object CategoryView "Use Case View::Business Use-Case Model" @1162
 			location   	(384, 320)
 			font       	(object Font
 			    size       	9
@@ -25466,7 +26549,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1117
+			    Parent_View 	@1162
 			    location   	(189, 229)
 			    fill_color 	13434879
 			    nlines     	2
@@ -25479,21 +26562,21 @@
 			quidu      	"35B677D701B8"
 			width      	403
 			height     	194)
-		    (object ImportView "" @1118
+		    (object ImportView "" @1163
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"35C633DA030C"
-			client     	@1115
-			supplier   	@1117
+			client     	@1160
+			supplier   	@1162
 			vertices   	(list Points
 			    (384, 718)
 			    (384, 417))
 			line_style 	0)
-		    (object AttachView "" @1119
+		    (object AttachView "" @1164
 			stereotype 	TRUE
 			line_color 	3342489
-			client     	@1118
-			supplier   	@1116
+			client     	@1163
+			supplier   	@1161
 			vertices   	(list Points
 			    (384, 567)
 			    (800, 561))
@@ -25565,7 +26648,7 @@
 					origin_x   	0
 					origin_y   	0
 					items      	(list diagram_item_list
-					    (object Label @1120
+					    (object Label @1165
 						location   	(416, 320)
 						font       	(object Font
 						    size       	11
@@ -25580,7 +26663,7 @@
 						max_width  	1768
 						justify    	1
 						label      	"diagrama de caso de uso realizaciòn de negocio - atencion al cliente")
-					    (object UseCaseView "Logical View::Business Object Model::r_departamento ventas::r_seccion atencion al cliente::r_mostrar articulo" @1121
+					    (object UseCaseView "Logical View::Business Object Model::r_departamento ventas::r_seccion atencion al cliente::r_mostrar articulo" @1166
 						location   	(1600, 640)
 						font       	(object Font
 						    size       	9
@@ -25592,7 +26675,7 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@1121
+						    Parent_View 	@1166
 						    location   	(1599, 816)
 						    anchor_loc 	1
 						    nlines     	2
@@ -25606,7 +26689,7 @@
 						quidu      	"5AE00A390159"
 						width      	306
 						height     	194)
-					    (object UseCaseView "Use Case View::Business Use-Case Model::veterinaria::departamento de ventas::seccion de atencion al cliente::mostrar articulo" @1122
+					    (object UseCaseView "Use Case View::Business Use-Case Model::veterinaria::departamento de ventas::seccion de atencion al cliente::mostrar articulo" @1167
 						location   	(576, 640)
 						font       	(object Font
 						    size       	9
@@ -25618,7 +26701,7 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@1122
+						    Parent_View 	@1167
 						    location   	(575, 816)
 						    anchor_loc 	1
 						    nlines     	2
@@ -25632,17 +26715,17 @@
 						quidu      	"5ADE74D701A4"
 						width      	306
 						height     	194)
-					    (object RealizeView "" @1123
+					    (object RealizeView "" @1168
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"5AE00AC403D6"
-						client     	@1121
-						supplier   	@1122
+						client     	@1166
+						supplier   	@1167
 						vertices   	(list Points
 						    (1446, 640)
 						    (726, 640))
 						line_style 	0)
-					    (object UseCaseView "Use Case View::Business Use-Case Model::veterinaria::departamento de ventas::seccion de atencion al cliente::elaborar documento" @1124
+					    (object UseCaseView "Use Case View::Business Use-Case Model::veterinaria::departamento de ventas::seccion de atencion al cliente::elaborar documento" @1169
 						location   	(624, 1632)
 						font       	(object Font
 						    size       	9
@@ -25654,7 +26737,7 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@1124
+						    Parent_View 	@1169
 						    location   	(623, 1807)
 						    anchor_loc 	1
 						    nlines     	2
@@ -25667,7 +26750,7 @@
 						fill_color 	13434879
 						quidu      	"5ADE7556018C"
 						width      	306)
-					    (object UseCaseView "Logical View::Business Object Model::r_departamento ventas::r_seccion atencion al cliente::r_elaborar documento" @1125
+					    (object UseCaseView "Logical View::Business Object Model::r_departamento ventas::r_seccion atencion al cliente::r_elaborar documento" @1170
 						location   	(1664, 1632)
 						font       	(object Font
 						    size       	9
@@ -25679,7 +26762,7 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@1125
+						    Parent_View 	@1170
 						    location   	(1663, 1808)
 						    anchor_loc 	1
 						    nlines     	2
@@ -25693,17 +26776,17 @@
 						quidu      	"5AE00B3800A6"
 						width      	306
 						height     	194)
-					    (object RealizeView "" @1126
+					    (object RealizeView "" @1171
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"5AE00B48012F"
-						client     	@1125
-						supplier   	@1124
+						client     	@1170
+						supplier   	@1169
 						vertices   	(list Points
 						    (1511, 1632)
 						    (774, 1632))
 						line_style 	0)
-					    (object UseCaseView "Use Case View::Business Use-Case Model::veterinaria::departamento de ventas::seccion de atencion al cliente::elaborar pedido" @1127
+					    (object UseCaseView "Use Case View::Business Use-Case Model::veterinaria::departamento de ventas::seccion de atencion al cliente::elaborar pedido" @1172
 						location   	(592, 1120)
 						font       	(object Font
 						    size       	9
@@ -25715,7 +26798,7 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@1127
+						    Parent_View 	@1172
 						    location   	(591, 1295)
 						    anchor_loc 	1
 						    nlines     	2
@@ -25728,7 +26811,7 @@
 						fill_color 	13434879
 						quidu      	"5ADE916C00A8"
 						width      	306)
-					    (object UseCaseView "Logical View::Business Object Model::r_departamento ventas::r_seccion atencion al cliente::r_elaborar pedido" @1128
+					    (object UseCaseView "Logical View::Business Object Model::r_departamento ventas::r_seccion atencion al cliente::r_elaborar pedido" @1173
 						location   	(1680, 1120)
 						font       	(object Font
 						    size       	9
@@ -25740,7 +26823,7 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@1128
+						    Parent_View 	@1173
 						    location   	(1679, 1296)
 						    anchor_loc 	1
 						    nlines     	2
@@ -25754,12 +26837,12 @@
 						quidu      	"5AE00BCF00E7"
 						width      	306
 						height     	194)
-					    (object RealizeView "" @1129
+					    (object RealizeView "" @1174
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"5AE00BE301C6"
-						client     	@1128
-						supplier   	@1127
+						client     	@1173
+						supplier   	@1172
 						vertices   	(list Points
 						    (1527, 1120)
 						    (742, 1120))
@@ -25795,7 +26878,7 @@
 					origin_x   	0
 					origin_y   	400
 					items      	(list diagram_item_list
-					    (object Label @1130
+					    (object Label @1175
 						location   	(400, 480)
 						font       	(object Font
 						    size       	11
@@ -25810,7 +26893,7 @@
 						max_width  	1768
 						justify    	1
 						label      	"diagrama de caso de uso realizaciòn de negocio - atencion de servicio")
-					    (object UseCaseView "Use Case View::Business Use-Case Model::veterinaria::departamento de ventas::seccion atencion de servicio::mostrar servicios" @1131
+					    (object UseCaseView "Use Case View::Business Use-Case Model::veterinaria::departamento de ventas::seccion atencion de servicio::mostrar servicios" @1176
 						location   	(624, 784)
 						font       	(object Font
 						    size       	9
@@ -25822,7 +26905,7 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@1131
+						    Parent_View 	@1176
 						    location   	(623, 959)
 						    anchor_loc 	1
 						    nlines     	2
@@ -25835,7 +26918,7 @@
 						fill_color 	13434879
 						quidu      	"5ADE77A40382"
 						width      	306)
-					    (object UseCaseView "Logical View::Business Object Model::r_departamento ventas::r_seccion atencion de servicio::r_mostrar servicios" @1132
+					    (object UseCaseView "Logical View::Business Object Model::r_departamento ventas::r_seccion atencion de servicio::r_mostrar servicios" @1177
 						location   	(1504, 784)
 						font       	(object Font
 						    size       	9
@@ -25847,7 +26930,7 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@1132
+						    Parent_View 	@1177
 						    location   	(1503, 960)
 						    anchor_loc 	1
 						    nlines     	2
@@ -25861,17 +26944,17 @@
 						quidu      	"5AE00C680001"
 						width      	306
 						height     	194)
-					    (object RealizeView "" @1133
+					    (object RealizeView "" @1178
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"5AE00C76018E"
-						client     	@1132
-						supplier   	@1131
+						client     	@1177
+						supplier   	@1176
 						vertices   	(list Points
 						    (1352, 784)
 						    (774, 784))
 						line_style 	0)
-					    (object UseCaseView "Use Case View::Business Use-Case Model::veterinaria::departamento de ventas::seccion atencion de servicio::aperturar cita" @1134
+					    (object UseCaseView "Use Case View::Business Use-Case Model::veterinaria::departamento de ventas::seccion atencion de servicio::aperturar cita" @1179
 						location   	(608, 1264)
 						font       	(object Font
 						    size       	9
@@ -25883,7 +26966,7 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@1134
+						    Parent_View 	@1179
 						    location   	(607, 1439)
 						    anchor_loc 	1
 						    nlines     	2
@@ -25896,7 +26979,7 @@
 						fill_color 	13434879
 						quidu      	"5ADE8019028C"
 						width      	306)
-					    (object UseCaseView "Logical View::Business Object Model::r_departamento ventas::r_seccion atencion de servicio::r_aperturar cita" @1135
+					    (object UseCaseView "Logical View::Business Object Model::r_departamento ventas::r_seccion atencion de servicio::r_aperturar cita" @1180
 						location   	(1520, 1264)
 						font       	(object Font
 						    size       	9
@@ -25908,7 +26991,7 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@1135
+						    Parent_View 	@1180
 						    location   	(1519, 1440)
 						    anchor_loc 	1
 						    nlines     	2
@@ -25922,12 +27005,12 @@
 						quidu      	"5AE00E710346"
 						width      	306
 						height     	194)
-					    (object RealizeView "" @1136
+					    (object RealizeView "" @1181
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"5AE00E86038E"
-						client     	@1135
-						supplier   	@1134
+						client     	@1180
+						supplier   	@1179
 						vertices   	(list Points
 						    (1368, 1264)
 						    (758, 1264))
@@ -25942,7 +27025,7 @@
 				origin_x   	0
 				origin_y   	0
 				items      	(list diagram_item_list
-				    (object CategoryView "Logical View::Business Object Model::r_departamento ventas::r_seccion atencion al cliente" @1137
+				    (object CategoryView "Logical View::Business Object Model::r_departamento ventas::r_seccion atencion al cliente" @1182
 					location   	(704, 736)
 					font       	(object Font
 					    size       	9
@@ -25954,7 +27037,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@1137
+					    Parent_View 	@1182
 					    location   	(703, 955)
 					    anchor_loc 	1
 					    nlines     	2
@@ -25968,7 +27051,7 @@
 					quidu      	"5AE008C70236"
 					width      	388
 					height     	288)
-				    (object CategoryView "Logical View::Business Object Model::r_departamento ventas::r_seccion atencion de servicio" @1138
+				    (object CategoryView "Logical View::Business Object Model::r_departamento ventas::r_seccion atencion de servicio" @1183
 					location   	(1472, 736)
 					font       	(object Font
 					    size       	9
@@ -25980,7 +27063,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@1138
+					    Parent_View 	@1183
 					    location   	(1471, 955)
 					    anchor_loc 	1
 					    nlines     	2
@@ -25994,7 +27077,7 @@
 					quidu      	"5AE008EC0290"
 					width      	388
 					height     	288)
-				    (object Label @1139
+				    (object Label @1184
 					location   	(528, 336)
 					font       	(object Font
 					    size       	11
@@ -26019,7 +27102,7 @@
 			origin_x   	0
 			origin_y   	0
 			items      	(list diagram_item_list
-			    (object CategoryView "Logical View::Business Object Model::r_departamento ventas" @1140
+			    (object CategoryView "Logical View::Business Object Model::r_departamento ventas" @1185
 				location   	(912, 592)
 				font       	(object Font
 				    size       	9
@@ -26031,7 +27114,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@1140
+				    Parent_View 	@1185
 				    location   	(911, 811)
 				    anchor_loc 	1
 				    nlines     	2
@@ -26167,16 +27250,16 @@
 			
 			exportControl 	"Public"
 			logical_models 	(list unit_reference_list
-			    (object Association "$UNNAMED$217"
+			    (object Association "$UNNAMED$222"
 				quid       	"35409E9D02A8"
 				stereotype 	"realize"
 				roles      	(list role_list
-				    (object Role "$UNNAMED$218"
+				    (object Role "$UNNAMED$223"
 					quid       	"35409E9E0294"
 					supplier   	"Use Case View::Use-Case Model::Use Cases::<Use Case Name>::<Use Case Name>"
 					quidu      	"34E37FB203D4"
 					is_navigable 	TRUE)
-				    (object Role "$UNNAMED$219"
+				    (object Role "$UNNAMED$224"
 					quid       	"35409E9E0295"
 					supplier   	"Logical View::Design Model::Use-Case Realizations::<Use-Case Name>::<Use-Case Name>"
 					quidu      	"352F38180276")))
@@ -26193,9 +27276,9 @@
 					
 					stereotype 	"use-case realization"
 					logical_models 	(list unit_reference_list
-					    (object Mechanism @1141
+					    (object Mechanism @1186
 						logical_models 	(list unit_reference_list))
-					    (object Mechanism @1142
+					    (object Mechanism @1187
 						logical_models 	(list unit_reference_list)))
 					logical_presentations 	(list unit_reference_list
 					    (object ClassDiagram "<Use Case Name> -  Realize Dependencies"
@@ -26219,7 +27302,7 @@
 						origin_y   	0
 						items      	(list diagram_item_list))
 					    (object InteractionDiagram "<Use Case Name> -  Basic Flow"
-						mechanism_ref 	@1141
+						mechanism_ref 	@1186
 						quid       	"35081E3603A2"
 						title      	"<Use Case Name> -  Basic Flow"
 						zoom       	100
@@ -26229,7 +27312,7 @@
 						origin_y   	0
 						items      	(list diagram_item_list))
 					    (object InteractionDiagram "<Use Case Name> -  <Flow Type>"
-						mechanism_ref 	@1142
+						mechanism_ref 	@1187
 						quid       	"3540A0B901AE"
 						title      	"<Use Case Name> -  <Flow Type>"
 						zoom       	100
@@ -26249,7 +27332,7 @@
 					origin_x   	0
 					origin_y   	0
 					items      	(list diagram_item_list
-					    (object NoteView @1143
+					    (object NoteView @1188
 						location   	(704, 144)
 						font       	(object Font
 						    size       	9
@@ -26261,7 +27344,7 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@1143
+						    Parent_View 	@1188
 						    location   	(38, 25)
 						    fill_color 	13434879
 						    nlines     	5
@@ -26275,7 +27358,7 @@
 						fill_color 	13434879
 						width      	1356
 						height     	250)
-					    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::<Use Case Name>::<Use Case Name>" @1144
+					    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::<Use Case Name>::<Use Case Name>" @1189
 						location   	(1152, 528)
 						font       	(object Font
 						    size       	9
@@ -26287,7 +27370,7 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@1144
+						    Parent_View 	@1189
 						    location   	(1152, 666)
 						    anchor_loc 	1
 						    nlines     	2
@@ -26299,7 +27382,7 @@
 						fill_color 	13434879
 						quidu      	"34E37FB203D4"
 						autoResize 	TRUE)
-					    (object UseCaseView "Logical View::Design Model::Use-Case Realizations::<Use-Case Name>::<Use-Case Name>" @1145
+					    (object UseCaseView "Logical View::Design Model::Use-Case Realizations::<Use-Case Name>::<Use-Case Name>" @1190
 						location   	(608, 960)
 						font       	(object Font
 						    size       	9
@@ -26311,7 +27394,7 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@1145
+						    Parent_View 	@1190
 						    location   	(608, 1148)
 						    anchor_loc 	1
 						    nlines     	2
@@ -26319,7 +27402,7 @@
 						    justify    	0
 						    label      	"<Use-Case Name>")
 						stereotype 	(object ItemLabel
-						    Parent_View 	@1145
+						    Parent_View 	@1190
 						    location   	(608, 1078)
 						    anchor     	10
 						    anchor_loc 	1
@@ -26333,7 +27416,7 @@
 						fill_color 	13434879
 						quidu      	"352F38180276"
 						autoResize 	TRUE)
-					    (object AssociationViewNew "$UNNAMED$217" @1146
+					    (object AssociationViewNew "$UNNAMED$222" @1191
 						location   	(876, 741)
 						font       	(object Font
 						    size       	9
@@ -26344,8 +27427,8 @@
 						    strike     	FALSE
 						    color      	0
 						    default_color 	TRUE)
-						stereotype 	(object SegLabel @1147
-						    Parent_View 	@1146
+						stereotype 	(object SegLabel @1192
+						    Parent_View 	@1191
 						    location   	(874, 746)
 						    font       	(object Font
 							size       	9
@@ -26368,26 +27451,26 @@
 						line_color 	3342489
 						quidu      	"35409E9D02A8"
 						roleview_list 	(list RoleViews
-						    (object RoleView "$UNNAMED$218" @1148
-							Parent_View 	@1146
+						    (object RoleView "$UNNAMED$223" @1193
+							Parent_View 	@1191
 							location   	(236, -539)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"35409E9E0294"
-							client     	@1146
-							supplier   	@1144
+							client     	@1191
+							supplier   	@1189
 							vertices   	(list Points
 							    (876, 741)
 							    (943, 689))
 							line_style 	0)
-						    (object RoleView "$UNNAMED$219" @1149
-							Parent_View 	@1146
+						    (object RoleView "$UNNAMED$224" @1194
+							Parent_View 	@1191
 							location   	(236, -539)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"35409E9E0295"
-							client     	@1146
-							supplier   	@1145
+							client     	@1191
+							supplier   	@1190
 							vertices   	(list Points
 							    (876, 741)
 							    (678, 899))
@@ -26406,16 +27489,16 @@
 				quid       	"35DB3CB002BC"
 				documentation 	"This is a sub-process or thread within the <name of process of which this thread is a sub-process> process which handles <enter a description of what this thread does>.  A separate thread was chosen for this to be able to <enter the rationale for creating a separate thread>."
 				stereotype 	"thread")
-			    (object Association "$UNNAMED$220"
+			    (object Association "$UNNAMED$225"
 				quid       	"35DB3E72017C"
 				roles      	(list role_list
-				    (object Role "$UNNAMED$221"
+				    (object Role "$UNNAMED$226"
 					quid       	"35DB3E73005A"
 					supplier   	"Logical View::Design Model::Process View::<Process Name>"
 					quidu      	"35DB3C8302D0"
 					is_navigable 	TRUE
 					is_aggregate 	TRUE)
-				    (object Role "$UNNAMED$222"
+				    (object Role "$UNNAMED$227"
 					quid       	"35DB3E730096"
 					supplier   	"Logical View::Design Model::Process View::<Thread Name>"
 					quidu      	"35DB3CB002BC"
@@ -26432,7 +27515,7 @@
 				origin_x   	0
 				origin_y   	0
 				items      	(list diagram_item_list
-				    (object ClassView "Class" "Logical View::Design Model::Process View::<Process Name>" @1150
+				    (object ClassView "Class" "Logical View::Design Model::Process View::<Process Name>" @1195
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -26447,7 +27530,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@1150
+					    Parent_View 	@1195
 					    location   	(122, 436)
 					    fill_color 	13434879
 					    nlines     	1
@@ -26455,7 +27538,7 @@
 					    justify    	0
 					    label      	"<Process Name>")
 					stereotype 	(object ItemLabel
-					    Parent_View 	@1150
+					    Parent_View 	@1195
 					    location   	(122, 389)
 					    fill_color 	13434879
 					    anchor     	10
@@ -26471,7 +27554,7 @@
 					height     	172
 					annotation 	8
 					autoResize 	TRUE)
-				    (object ClassView "Class" "Logical View::Design Model::Process View::<Thread Name>" @1151
+				    (object ClassView "Class" "Logical View::Design Model::Process View::<Thread Name>" @1196
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -26486,7 +27569,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@1151
+					    Parent_View 	@1196
 					    location   	(740, 436)
 					    fill_color 	13434879
 					    nlines     	1
@@ -26494,7 +27577,7 @@
 					    justify    	0
 					    label      	"<Thread Name>")
 					stereotype 	(object ItemLabel
-					    Parent_View 	@1151
+					    Parent_View 	@1196
 					    location   	(740, 389)
 					    fill_color 	13434879
 					    anchor     	10
@@ -26510,32 +27593,32 @@
 					height     	172
 					annotation 	8
 					autoResize 	TRUE)
-				    (object AssociationViewNew "$UNNAMED$220" @1152
+				    (object AssociationViewNew "$UNNAMED$225" @1197
 					location   	(596, 464)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"35DB3E72017C"
 					roleview_list 	(list RoleViews
-					    (object RoleView "$UNNAMED$221" @1153
-						Parent_View 	@1152
+					    (object RoleView "$UNNAMED$226" @1198
+						Parent_View 	@1197
 						location   	(-300, 0)
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"35DB3E73005A"
-						client     	@1152
-						supplier   	@1150
+						client     	@1197
+						supplier   	@1195
 						vertices   	(list Points
 						    (596, 464)
 						    (463, 464))
 						line_style 	0)
-					    (object RoleView "$UNNAMED$222" @1154
-						Parent_View 	@1152
+					    (object RoleView "$UNNAMED$227" @1199
+						Parent_View 	@1197
 						location   	(-300, 0)
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"35DB3E730096"
-						client     	@1152
-						supplier   	@1151
+						client     	@1197
+						supplier   	@1196
 						vertices   	(list Points
 						    (596, 464)
 						    (730, 464))
@@ -26551,7 +27634,7 @@
 			origin_x   	0
 			origin_y   	0
 			items      	(list diagram_item_list
-			    (object NoteView @1155
+			    (object NoteView @1200
 				location   	(672, 304)
 				font       	(object Font
 				    size       	9
@@ -26563,7 +27646,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@1155
+				    Parent_View 	@1200
 				    location   	(28, 19)
 				    fill_color 	13434879
 				    nlines     	13
@@ -26587,7 +27670,7 @@
 				fill_color 	13434879
 				width      	1313
 				height     	582)
-			    (object NoteView @1156
+			    (object NoteView @1201
 				location   	(1696, 160)
 				font       	(object Font
 				    size       	9
@@ -26599,7 +27682,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@1156
+				    Parent_View 	@1201
 				    location   	(1358, 29)
 				    fill_color 	13434879
 				    nlines     	5
@@ -26635,7 +27718,7 @@
 			origin_x   	0
 			origin_y   	0
 			items      	(list diagram_item_list
-			    (object NoteView @1157
+			    (object NoteView @1202
 				location   	(576, 256)
 				font       	(object Font
 				    size       	9
@@ -26647,7 +27730,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@1157
+				    Parent_View 	@1202
 				    location   	(44, 31)
 				    fill_color 	13434879
 				    nlines     	9
@@ -26667,7 +27750,7 @@
 				fill_color 	13434879
 				width      	1088
 				height     	463)
-			    (object NoteView @1158
+			    (object NoteView @1203
 				location   	(1520, 176)
 				font       	(object Font
 				    size       	9
@@ -26679,7 +27762,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@1158
+				    Parent_View 	@1203
 				    location   	(1182, 45)
 				    fill_color 	13434879
 				    nlines     	5
@@ -26717,7 +27800,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object NoteView @1159
+		    (object NoteView @1204
 			location   	(768, 384)
 			font       	(object Font
 			    size       	9
@@ -26729,7 +27812,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1159
+			    Parent_View 	@1204
 			    location   	(121, 96)
 			    fill_color 	13434879
 			    nlines     	14
@@ -26789,7 +27872,7 @@
 			origin_x   	0
 			origin_y   	0
 			items      	(list diagram_item_list
-			    (object NoteView @1160
+			    (object NoteView @1205
 				location   	(624, 160)
 				font       	(object Font
 				    size       	9
@@ -26801,7 +27884,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@1160
+				    Parent_View 	@1205
 				    location   	(21, 26)
 				    fill_color 	13434879
 				    nlines     	5
@@ -26828,7 +27911,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object SubSysView "Component View::Implementation Model" @1161
+		    (object SubSysView "Component View::Implementation Model" @1206
 			location   	(736, 800)
 			font       	(object Font
 			    size       	9
@@ -26840,7 +27923,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1161
+			    Parent_View 	@1206
 			    location   	(552, 713)
 			    fill_color 	13434879
 			    nlines     	2
@@ -26903,7 +27986,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object ProcessorView "<processor name>" @1162
+		    (object ProcessorView "<processor name>" @1207
 			location   	(512, 1056)
 			font       	(object Font
 			    size       	9
@@ -26915,7 +27998,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1162
+			    Parent_View 	@1207
 			    location   	(276, 900)
 			    nlines     	2
 			    max_width  	400
@@ -26926,7 +28009,7 @@
 			width      	475
 			height     	381
 			annotation 	3)
-		    (object DeviceView "<device name>" @1163
+		    (object DeviceView "<device name>" @1208
 			location   	(1040, 1056)
 			font       	(object Font
 			    size       	9
@@ -26938,7 +28021,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1163
+			    Parent_View 	@1208
 			    location   	(867, 950)
 			    nlines     	2
 			    max_width  	275
@@ -26949,16 +28032,16 @@
 			width      	350
 			height     	282
 			annotation 	0)
-		    (object ConnectionView "" @1164
+		    (object ConnectionView "" @1209
 			stereotype 	TRUE
 			quidu      	"34DBBD4B008C"
-			client     	@1162
-			supplier   	@1163
+			client     	@1207
+			supplier   	@1208
 			vertices   	(list Points
 			    (718, 1056)
 			    (865, 1056))
 			line_style 	0)
-		    (object NoteView @1165
+		    (object NoteView @1210
 			location   	(816, 304)
 			font       	(object Font
 			    size       	9
@@ -26970,7 +28053,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@1165
+			    Parent_View 	@1210
 			    location   	(38, 29)
 			    fill_color 	13434879
 			    nlines     	11
