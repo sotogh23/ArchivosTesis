@@ -27141,7 +27141,7 @@
 					nlines     	2
 					max_width  	1768
 					justify    	1
-					label      	"diagrama de caso de uso realizaciòn de negocio - atencion al cliente")
+					label      	"diagrama de caso de uso realizaciòn de negocio - almacen: ingreso articulos")
 				    (object UseCaseView "Use Case View::Business Use-Case Model::veterinaria::departamento de almacen::realizar pedido articulo" @1186
 					location   	(464, 608)
 					font       	(object Font
