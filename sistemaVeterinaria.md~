@@ -23080,7 +23080,7 @@
 							    max_height 	28350
 							    max_width  	21600
 							    origin_x   	0
-							    origin_y   	5742
+							    origin_y   	0
 							    items      	(list diagram_item_list
 								(object Swimlane "usuario" @995
 								    line_color 	3342489
@@ -23088,7 +23088,7 @@
 								    width      	1220)
 								(object StateView "StartState" "$UNNAMED$206" @996
 								    Parent_View 	@995
-								    location   	(448, 160)
+								    location   	(640, 144)
 								    icon_style 	"Icon"
 								    line_color 	3342489
 								    quidu      	"5AE8D18800F4"
@@ -23127,8 +23127,8 @@
 								    client     	@996
 								    supplier   	@997
 								    vertices   	(list Points
-									(478, 195)
-									(595, 332))
+									(640, 174)
+									(640, 332))
 								    line_style 	0
 								    x_offset   	FALSE)
 								(object ActivityStateView "pulsar nuevo cita" @999
