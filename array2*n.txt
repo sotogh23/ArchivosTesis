@@ -1,0 +1,34 @@
+int c = 1, fila, columna;
+int [,] asiento = new int[2,40];
+
+while(c <= 20)
+{
+   Console.WriteLine("Por favor ingresar el numero de la fila (1,2)");
+   fila = int.parse(Console.ReadLine());
+   Console.WriteLine("Por favor ingresar el numero de la fila (1,2)");
+   columna = int.parse(Console.ReadLine());
+   
+   if(asiento[fila - 1, columna -1] == 0)
+   {
+      asiento[fila - 1, columna - 1] = 1;
+      c = c + 1;
+      Console.WriteLine("Reseva Exitosa");
+   }
+   else
+   {
+      Console.WriteLine("Asiento Ocupado");
+   }
+}
+for(int i = 0; i < 2; i++)
+{
+    for(int j = 0; j < 40; j++)
+    {
+        Console.WriteLine(asiento[i,j] + "\t");
+    }
+    Console.WriteLine();  
+}
+Console.ReadKey();
+
+    
+    
+   
